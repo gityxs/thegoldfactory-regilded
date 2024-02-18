@@ -2002,7 +2002,7 @@ function dosave(param) {
 		hasportal=(savecode[74] === "true");
 		if(savecode.length>=76) { cipherstep=parseInt(savecode[75]); } else { cipherstep=0; }
 		if(savecode.length>=77) { activatemachine=(savecode[76] === "true"); } else { activatemachine=0; }
-		if(savecode.length>=78) { autosave=(savecode[77] === "true"); } else { autosave=false; }
+		if(savecode.length>=78) { autosave=(savecode[77] === "true"); }
 
 		checkthings();
 
