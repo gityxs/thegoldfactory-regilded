@@ -2809,7 +2809,7 @@ function dig(countdown,cheat) {
 		}
 		if(countdown) {
 			if(digcountdown==999999999) {
-				digcountdown=10;
+				digcountdown=5;
 				closemessage();
 				dig(true,false);
 				digabcd=setInterval(function(){digcountdown--;},60000);
