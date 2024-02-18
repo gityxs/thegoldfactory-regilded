@@ -80,7 +80,7 @@ function updateitems() {
 	$(".iron-mining-amount").html(ironmining);
 	$(".ibpt").html(ibpt);
     $(".skilllvl").html(skilllvl);
-    $(".thunder-damage").html(20+skilllvl*7);
+    $(".thunder-damage").html(20+skilllvl*10);
     $(".invuln-time").html((3+(skilllvl*3)));
     $(".upgrade-price").html(skilllvl*skilllvl*500+500);
 	$(".irontime").html(second2name(ibtime));
