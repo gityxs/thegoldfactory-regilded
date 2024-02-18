@@ -332,9 +332,9 @@ function checkitem() {
 	if(goldbar < 400) { $(".buy-pizza-20").attr("disabled","disabled"); } else { $(".buy-pizza-20").removeAttr("disabled"); }
 	if(goldbar < 100) { $(".buy-iron-bar").attr("disabled","disabled"); } else { $(".buy-iron-bar").removeAttr("disabled"); }
 	if(goldbar < 20) { $(".training-button").attr("disabled","disabled"); }else { $(".training-button").removeAttr("disabled"); }
-	if(ironbar < ironprice) { $(".buy-1-mining").attr("disabled","disabled"); } else { $(".buy-1-mining").removeAttr("disabled"); }
-	if(ironbar < (ironprice*10)) { $(".buy-10-mining").attr("disabled","disabled"); } else { $(".buy-10-mining").removeAttr("disabled"); }
-	if(ironbar < (ironprice*100)) { $(".buy-100-mining").attr("disabled","disabled"); } else { $(".buy-100-mining").removeAttr("disabled"); }
+	if(goldbar < ironprice) { $(".buy-1-mining").attr("disabled","disabled"); } else { $(".buy-1-mining").removeAttr("disabled"); }
+	if(goldbar < (ironprice*10)) { $(".buy-10-mining").attr("disabled","disabled"); } else { $(".buy-10-mining").removeAttr("disabled"); }
+	if(goldbar < (ironprice*100)) { $(".buy-100-mining").attr("disabled","disabled"); } else { $(".buy-100-mining").removeAttr("disabled"); }
 	if(goldbar < (skilllvl+1)) { $(".upgrade-price").attr("disabled","disabled"); } else { $(".upgrade-price").removeAttr("disabled"); }
 	if(goldbar < 2500) { $(".buy-factory-button").attr("disabled","disabled"); } else { $(".buy-factory-button").removeAttr("disabled"); }
 	if(ironbar < goldprice) { $(".buy-1-mining-gold").attr("disabled","disabled"); } else { $(".buy-1-mining").removeAttr("disabled"); }
