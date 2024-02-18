@@ -1,11 +1,13 @@
 /*
 
-	As you can see, i'm not a javascript master
+	As you can see, i'm not a javascript master (Me neither! -voxelbugged)
 	The code is full of functions :o
 
 	Btw, there are very very few comments that explain the code >:) HAHAHAHA
+	
+	(Not really a problem, the code is very self-explanatory. -voxelbugged) 
 
-	Hope you enjoyed the game
+	Hope you enjoyed the game (I did! -voxelbugged)
 	(I want you to read this after finishing the game or things in this game may be spoiled to you)
 
 */
@@ -84,11 +86,11 @@ function updateitems() {
 	$(".irontime").html(second2name(ibtime));
 	$(".gold-mining").html(goldmining);
 	$(".gbps").html(gbps);
-	ironprice=10+Math.floor(ironmining*ironmining/150);
+	ironprice=10+Math.floor(ironmining*ironmining/450);
 	$(".1-iron-cost").html(ironprice);
 	$(".10-iron-cost").html(ironprice*10);
 	$(".100-iron-cost").html(ironprice*100);
-	goldprice=10+Math.floor(goldmining*goldmining/75);
+	goldprice=10+Math.floor(goldmining*goldmining/150);
 	$(".1-gold-cost").html(goldprice);
 	$(".10-gold-cost").html(goldprice*10);
 	$(".100-gold-cost").html(goldprice*100);
@@ -117,13 +119,13 @@ function updateitems() {
 	}
 	else {
 		$(".button-enchant-countdown").attr("disabled","disabled");
-		$(".enchant-sword-countdown").html("Countdown 1 is the highest level of countdown enchantment");
+		$(".enchant-sword-countdown").html("Countdown 1 is the highest level of the countdown enchantment!");
 	}
 
 	if(enchant_defense==10) { $(".button-enchant-defense").attr("disabled","disabled"); }
 	if(enchant_life==10) {
 		$(".button-enchant-life").attr("disabled","disabled");
-		$(".enchant-sword-life").html("Life 10 is the highest level of life enchantment");
+		$(".enchant-sword-life").html("Life 10 is the highest level of the life enchantment!");
 	}
 
 	if(airplanecountdown==0) {
@@ -158,7 +160,7 @@ function updateitems() {
 		$(".button-buy-helmet").val("Buy a diamond helmet");
 	}
 	else {
-		$(".helmet-area").html("Sorry, I have no better helmet for you");
+		$(".helmet-area").html("Sorry, I have no better helmet for you.");
 	}
 
 	if(chestplate==0) {
@@ -174,7 +176,7 @@ function updateitems() {
 		$(".button-buy-chestplate").val("Buy a diamond chestplate");
 	}
 	else {
-		$(".chestplate-area").html("Sorry, I have no better chestplate for you");
+		$(".chestplate-area").html("Sorry, I have no better chestplate for you.");
 	}
 
 	if(pants==0) {
@@ -190,7 +192,7 @@ function updateitems() {
 		$(".button-buy-pants").val("Buy diamond pants");
 	}
 	else {
-		$(".pants-area").html("Sorry, I have no better pants for you");
+		$(".pants-area").html("Sorry, I have no better pants for you.");
 	}
 
 	if(boots==0) {
@@ -206,7 +208,7 @@ function updateitems() {
 		$(".button-buy-boots").val("Buy diamond boots");
 	}
 	else {
-		$(".boots-area").html("Sorry, I have no better boots for you");
+		$(".boots-area").html("Sorry, I have no better boots for you.");
 	}
 
 	$(".buy-helmet-price").html((helmet*helmet)*1000+1000);
@@ -334,7 +336,7 @@ function checkitem() {
 	if(ironbar < (ironprice*10)) { $(".buy-10-mining").attr("disabled","disabled"); } else { $(".buy-10-mining").removeAttr("disabled"); }
 	if(ironbar < (ironprice*100)) { $(".buy-100-mining").attr("disabled","disabled"); } else { $(".buy-100-mining").removeAttr("disabled"); }
 	if(goldbar < (skilllvl+1)) { $(".upgrade-price").attr("disabled","disabled"); } else { $(".upgrade-price").removeAttr("disabled"); }
-	if(goldbar < 5000) { $(".buy-factory-button").attr("disabled","disabled"); } else { $(".buy-factory-button").removeAttr("disabled"); }
+	if(goldbar < 2500) { $(".buy-factory-button").attr("disabled","disabled"); } else { $(".buy-factory-button").removeAttr("disabled"); }
 	if(ironbar < goldprice) { $(".buy-1-mining-gold").attr("disabled","disabled"); } else { $(".buy-1-mining").removeAttr("disabled"); }
 	if(ironbar < goldprice*10) { $(".buy-10-mining-gold").attr("disabled","disabled"); } else { $(".buy-10-mining").removeAttr("disabled"); }
 	if(ironbar < goldprice*100) { $(".buy-100-mining-gold").attr("disabled","disabled"); } else { $(".buy-100-mining").removeAttr("disabled"); }
@@ -367,7 +369,7 @@ function buy(item,number) {
 						$(".diamond-sword-shop").show();
 					}
 					else {
-						alert('I need a sword stone too! Maybe this iron sword is too expensive for you, but it\'s useful!');
+						alert('I need a stone sword too! Maybe this iron sword is too expensive for you, but it\'s useful!');
 						valid=false;
 					}
 				}
@@ -454,10 +456,7 @@ function enchantsword(type) {
 }
 $(document).ready(function() {
 
-	setTimeout(() => $('.bubble').fadeOut(), 5000);
-	$('.leversion').html("1.3");
-	//closemessage();
-	//makealert("beta-notice","Beta version notice","As you can see on the left bottom corner of the page, this game is still in beta version (although it is beta but the game is finished)<br><br>So, please let me know if there are some bugs or not working features via <a href=\"http://reddit.com/r/thegoldfactory\">reddit</a> (especially for the saving feature)<br><br>Plus, when i'm typing this, I haven't completed the game without cheating ;) So, the game may be impossible to win. Please let me know if the game is really impossible to win<br><br>Enjoy the game! :D",true);
+	$('.leversion').html("1.v1");
 
 	goldbar=0; //0
 	ironbar=0; //0
@@ -473,8 +472,8 @@ $(document).ready(function() {
 	items.push({"name":"wooden sword","price":150,"owned":0,"plural":"s","showstorage":false}); //2
 	items.push({"name":"pizza","price":20,"owned":0,"plural":"s","showstorage":false}); //3
 	items.push({"name":"stone sword","price":500,"owned":0,"plural":"s","showstorage":false}); //4
-	items.push({"name":"iron sword","price":1500,"owned":0,"plural":"s","showstorage":false}); //5
-	items.push({"name":"diamond sword","price":4000,"owned":0,"plural":"s","showstorage":false}); //6
+	items.push({"name":"iron sword","price":1000,"owned":0,"plural":"s","showstorage":false}); //5
+	items.push({"name":"diamond sword","price":3000,"owned":0,"plural":"s","showstorage":false}); //6
 	items.push({"name":"health potion","price":50,"owned":0,"plural":"s","showstorage":true}); //7
 	items.push({"name":"ancient scroll","price":0,"owned":0,"plural":"s","showstorage":true}); //8
 	items.push({"name":"nether stone","price":0,"owned":0,"plural":"s","showstorage":true}); //9
@@ -583,15 +582,15 @@ $(document).ready(function() {
 	$("#gold-factory").click(function() {
 		if(!passgate&&!buyfactory) {
 			closemessage();
-			makealert("gold-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary<br><br><input type=\"button\" value=\"Make the boss happier\" onclick=\"makebosshappy()\"> and receive bonus!",true)
+			makealert("gold-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary.<br><br><input type=\"button\" value=\"Make the boss happier\" onclick=\"makebosshappy()\"> and receive a bonus!",true)
 		}
 		else if(passgate&&!buyfactory) {
 			closemessage();
-			makealert("buy-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary<br><br><input type=\"button\" value=\"Make the boss happier\" onclick=\"makebosshappy()\">and receive bonus!<br><input type=\"button\" value=\"Buy this factory\" onclick=\"buythefactory()\" class=\"buy-factory-button\"> for 5000 goldbars and get more goldbars each second!",true)
+			makealert("buy-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary.<br><br><input type=\"button\" value=\"Make the boss happier\" onclick=\"makebosshappy()\">and receive a bonus!<br><input type=\"button\" value=\"Buy this factory\" onclick=\"buythefactory()\" class=\"buy-factory-button\"> for 2500 gold bars and get more bars per second!",true)
 		}
 		else if(passgate&&buyfactory) {
 			closemessage();
-			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>Currently you have <span class=\"gold-mining\">"+goldmining+"</span> mining machines<br>Production: <span class=\"gbps\">"+gbps+"</span> goldbars / second<br><br><input type=\"button\" value=\"Buy 1 mining machine\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold\"> (<span class=\"10-gold-cost\">"+goldprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold\"> (<span class=\"100-gold-cost\">"+goldprice*100+"</span> Iron Bars)<br><br>Tips: Buying 100 machines once is cheaper than buying 1 machine 100 times",true)
+			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>Currently you have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold\"> (<span class=\"10-gold-cost\">"+goldprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold\"> (<span class=\"100-gold-cost\">"+goldprice*100+"</span> Iron Bars)<br><br>Tip: Buying 100 machines once is cheaper than buying 10 machines 10 times.",true)
 		}
 	});
 	$(".theshop").click(function() {
@@ -622,10 +621,10 @@ $(document).ready(function() {
 		if(passworms) {
 			closemessage();
 			if(skill!="none") {
-				makealert("training-center","Training Center","Welcome to the training center!<br>Here you can test your skills or study a new power<br><br><input type=\"button\" value=\"Test my skill\" onclick=\"testskill()\" class=\"training-button\"> (20 Gold Bars)<br><input type=\"button\" value=\"Upgrade my skill\" onclick=\"upgradeskill()\" class=\"upgrade-skill\">",true)
+				makealert("training-center","Training Center","Welcome to the training center!<br>Here you can test your skills or learn a new power.<br><br><input type=\"button\" value=\"Test my skill\" onclick=\"testskill()\" class=\"training-button\"> (20 Gold Bars)<br><input type=\"button\" value=\"Upgrade my skill\" onclick=\"upgradeskill()\" class=\"upgrade-skill\">",true)
 			}
 			else {
-				makealert("training-center","Training Center","Welcome to the training center!<br>Here you can test your skills or study a new power<br><br><input type=\"button\" value=\"Test my skill\" onclick=\"testskill()\" class=\"training-button\"> (20 Gold Bars)<br><input type=\"button\" value=\"Learn a new skill\" onclick=\"learnnewskill()\" class=\"new-skill\">",true)
+				makealert("training-center","Training Center","Welcome to the training center!<br>Here you can test your skills or learn a new power.<br><br><input type=\"button\" value=\"Test my skill\" onclick=\"testskill()\" class=\"training-button\"> (20 Gold Bars)<br><input type=\"button\" value=\"Learn a new skill\" onclick=\"learnnewskill()\" class=\"new-skill\">",true)
 			}
 		}
 	});
@@ -633,7 +632,7 @@ $(document).ready(function() {
 		if(passworms) {
 			closemessage();
 			irontime=second2name(ibtime);
-			makealert("mining","Iron Mine","Iron mine allows you to get some iron bar(s) each hour / min / sec<br><br>Currently you have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machine(s)<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 1 mining machine\" onclick=\"buyminingmachine(1)\" class=\"buy-1-mining\"> (<span class=\"1-iron-cost\">"+ironprice+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+ironprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+ironprice*100+"</span> Iron Bars)<br><br>Tips: Buying 100 machines once is cheaper than buying 1 machine 100 times",true)
+			makealert("mining","Iron Mine","The iron mine allows you to get some iron bar(s) each hour / min / sec<br><br>Currently you have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machines.<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+ironprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+ironprice*100+"</span> Iron Bars)<br><br>Tip: Buying 100 machines once is cheaper than buying 10 machines 10 times.",true)
 		}
 	});
 	$(".gate").click(function() {
@@ -656,11 +655,11 @@ $(document).ready(function() {
 		else if(passgate&&unlockenchant) {
 			if(items[6].owned==0 && items[22].owned==0) {
 				closemessage();
-				makealert("enchant-shop","Enchanting Shop","You can only enchant diamond and emerald sword, sorry :(",true)
+				makealert("enchant-shop","Enchanting Shop","You can only enchant the diamond sword, sorry :(",true)
 			}
 			else {
 				closemessage();
-				makealert("enchant-shop","Enchanting Shop","Welcome to the enchanting shop! Here you can enchant your sword<br><br><span class=\"enchants\"></span><br><br><div class='enchant-sword-attack'>Enchant with <input type=\"button\" value=\"Attack 1\" onclick=\"enchantsword('attack')\" class=\"button-enchant-attack\"> (<span class=\"enchant-attack-price\"></span> gold bars)</div><!--br>Enchant with <input type=\"button\" value=\"Defense 1\" onclick=\"enchantsword('defense')\" class=\"button-enchant-defense\"> (<span class=\"enchant-defense-price\"></span> gold bars)--><div class='enchant-sword-countdown'>Enchant with <input type=\"button\" value=\"Countdown 1\" onclick=\"enchantsword('countdown')\" class=\"button-enchant-countdown\"> (<span class=\"enchant-countdown-price\"></span> gold bars)</div><div class='enchant-sword-life'>Enchant with <input type=\"button\" value=\"Life 1\" onclick=\"enchantsword('life')\" class=\"button-enchant-life\"> (<span class=\"enchant-life-price\"></span> gold bars)</div><br><br>Or, <input type=\"button\" value=\"visit the armor section\" onclick=\"armorshop()\" class=\"button-armor-shop\"> of the shop",true)
+				makealert("enchant-shop","Enchanting Shop","Welcome to the enchanting shop! Here you can enchant your sword.<br><br><span class=\"enchants\"></span><br><br><div class='enchant-sword-attack'>Enchant with <input type=\"button\" value=\"Attack 1\" onclick=\"enchantsword('attack')\" class=\"button-enchant-attack\"> (<span class=\"enchant-attack-price\"></span> gold bars)</div><!--br>Enchant with <input type=\"button\" value=\"Defense 1\" onclick=\"enchantsword('defense')\" class=\"button-enchant-defense\"> (<span class=\"enchant-defense-price\"></span> gold bars)--><div class='enchant-sword-countdown'>Enchant with <input type=\"button\" value=\"Countdown 1\" onclick=\"enchantsword('countdown')\" class=\"button-enchant-countdown\"> (<span class=\"enchant-countdown-price\"></span> gold bars)</div><div class='enchant-sword-life'>Enchant with <input type=\"button\" value=\"Life 1\" onclick=\"enchantsword('life')\" class=\"button-enchant-life\"> (<span class=\"enchant-life-price\"></span> gold bars)</div><br><br>Or, <input type=\"button\" value=\"visit the armor section\" onclick=\"armorshop()\" class=\"button-armor-shop\"> of the shop.",true)
 				checkthings();
 			}
 		}
@@ -669,8 +668,8 @@ $(document).ready(function() {
 		if(passgate&&!unlockchest) {
 			closemessage();
 			powerhp();
-			battle=makebattle(Math.round(Math.random()*100),"Ghost",400,400,"Invisible hands",27,"This ghost is gurading the chest",4,power,hp,hp,currentsword,false,"vs-ghost");
-			html="<div class=\"alert alert-battle-ghost\"><b>Ghost</b><br>The chest is guarded by a ghost<br><br>"+battle.html+"</div>";
+			battle=makebattle(Math.round(Math.random()*100),"Ghost",400,400,"Invisible hands",27,"This ghost is guarding the chest.",4,power,hp,hp,currentsword,false,"vs-ghost");
+			html="<div class=\"alert alert-battle-ghost\"><b>Ghost</b><br>The chest is guarded by a ghost!<br><br>"+battle.html+"</div>";
 			$("#otheralerts").append(html);
 			battle.init();
 			closemessage();
@@ -680,10 +679,10 @@ $(document).ready(function() {
 			openchestcount++;
 			closemessage();
 			if(openchestcount==1) {
-				message="The chest is empty now";
+				message="The chest is empty now.";
 			}
 			else if(openchestcount==2) {
-				message="The chest is empty now, told ya before";
+				message="The chest is empty now, told ya before!";
 			}
 			else if(openchestcount==3) {
 				message="THE CHEST IS EMPTY!!!!!";
@@ -692,17 +691,17 @@ $(document).ready(function() {
 				message="PLS BELIEVE ME!!!";
 			}
 			else if(openchestcount==5) {
-				message="I've told you";
+				message="I've told you!";
 			}
 			else if(openchestcount==6) {
-				message="Now I hate you";
+				message="Now I hate you.";
 			}
 			else if(openchestcount==7) {
 				message="Oh, no, sorry, the chest is not empty, there are 1000 gold bars hidden inside the chest :D";
 				goldbar+=1000;
 			}
 			else if(openchestcount>=8) {
-				message="The chest is empty now (really)";
+				message="The chest is empty now (for real)";
 			}
 			$(".alert-chest-empty").remove();
 			makealert("chest-empty","Empty",message,true)
@@ -753,7 +752,7 @@ $(document).ready(function() {
 		if(reachedclouds) {
 		}
 		else if(passgate&&!hasairplane) {
-			makealert("buy-airplane","Airplane","This airplane is for sale, you can buy it<br><br><input type=\"button\" value=\"Buy\" onclick=\"buyairplane()\"> the airplane (5,000,000 iron bars)",true);
+			makealert("buy-airplane","Airplane","This airplane is for sale, you can buy it<br><br><input type=\"button\" value=\"Buy\" onclick=\"buyairplane()\"> the airplane (50,000 iron bars)",true);
 		}
 		else if(passgate&&hasairplane&&airplanecountdown==999999999) {
 			makealert("fly","Fly!!!","Are you ready to fly?<br><br><input type=\"button\" value=\"Fly now!!!\" onclick=\"fly()\">",true);
@@ -788,7 +787,7 @@ man="\n\
 		}
 	});
 	$(".nametag").click(function() {
-		makealert("name-tag","Name tag","You found a name tag!<br>You can change your name and description in battles<br><br>Name: <input type='text' id='yourname' value='"+theusername+"'><br>Description: <input type='text' id='yourdesc' value='"+theuserdesc+"'><br><br>Warning: Putting very long name / description or putting some wild characters may mess up the game",true);
+		makealert("name-tag","Name tag","You found a name tag!<br>You can change your name and description in battles!<br><br>Name: <input type='text' id='yourname' value='"+theusername+"'><br>Description: <input type='text' id='yourdesc' value='"+theuserdesc+"'><br><br>WARNING: Putting a very long name/description or putting some wild characters may corrupt your save file!",true);
 		namedesc=setInterval(function() {
 			theusername=$("#yourname").val();
 			theuserdesc=$("#yourdesc").val();
@@ -806,9 +805,9 @@ chestascii='\n\
       % \\ | %  ))   |\n\
       %  \\|%________|\n\
        %%%%';
-			makealert("chest-underground","Chest","You found a chest, the chest contains some resources and items!<br><br><pre>"+chestascii+"</pre>",true);
-			goldbar+=5000;
-			ironbar+=5000;
+			makealert("chest-underground","Chest","You found a chest, the chest contained some resources and items!<br><br><pre>"+chestascii+"</pre>",true);
+			goldbar+=1500;
+			ironbar+=3000;
 			items[7].owned+=5;
 			chestunderground=true;
 			checkthings();
@@ -981,8 +980,8 @@ function givelavabuckettothemachine() {
 function clickcloud() {
 	clickcloudcount++;
 	if(clickcloudcount==10) {
-		goldbar+=100;
-		makealert("falling-gold","Gold!","100 gold bars are falling from the sky!",true);
+		goldbar+=1000;
+		makealert("falling-gold","Gold!","1000 gold bars just fell from the sky!",true);
 		checkthings();
 	}
 }
@@ -1008,7 +1007,7 @@ function testskill() {
 		hpdivide10=Math.ceil(hp/10);
 		closemessage();
 		battle=makebattle(Math.round(Math.random()*100),"Training Robot",hp+hpdivide10,hp+hpdivide10,"Short ranged laser!",power+Math.ceil(power/10),"A training robot",2,power,hp,hp,currentsword,false,"training");
-		html="<div class=\"alert alert-training\"><b>Test my skill!</b><br>Let's see how strong you are<br><br>"+battle.html+"</div>";
+		html="<div class=\"alert alert-training\"><b>Test my skill!</b><br>Let's see how strong you are!<br><br>"+battle.html+"</div>";
 		$("#otheralerts").append(html);
 		battle.init();
 		$(".alert-training").fadeIn("fast");
@@ -1016,7 +1015,7 @@ function testskill() {
 }
 function showcredits() {
 	closemessage();
-	makealert("credits","Credits","<div style='max-height:300px; overflow-y:auto;'><br>Ascii arts:<br><br>Factory, house, thunder, monster, castle, chest,<br>ghost, airplane, microscope, scroll, fox, rat:<br><a href='http://www.retrojunkie.com/asciiart/asciiart.htm' target='_blank'>http://www.retrojunkie.com/asciiart/asciiart.htm</a> (with a little modification)<br><hr>Cloud:<br><a href='http://www.geocities.com/spunk1111/nature.htm#clouds' target='_blank'>http://www.geocities.com/spunk1111/nature.htm#clouds</a><br>(taken from a \"landscape\")<br><hr>Computer:<br>aniwey (from Candy Box 2)<br><hr>Banner plane:<br><a href='http://www.asciiworld.com/-Planes-.html' target='_blank'>http://www.asciiworld.com/-Planes-.html</a> (with a little modification)<hr>Some other ascii arts are created by me :D<br><br><br>Inspired by:<br>The \"legendary\" <a href='http://candies.aniwey.net' target='_blank' onclick='candybox=true'>Candy Box</a> game<br>and <a href='http://adarkroom.doublespeakgames.net' target='_blank'>A Dark Room</a><br>and also <a href='http://candybox2.net' target='_blank' onclick='candybox=true'>Candy Box 2</a><br><br>Thanks to<br>Minecraft for the \"names\", enchanting, and some others :D<br><br>Also special thanks to:<br>- Redditors, people from cb2 forum, people from jayisgames.com for the bug reports, suggestions and critics<br>- Also thanks to <a href='https://github.com/gamehelp16/thegoldfactory/graphs/contributors' target='_blank'>several people</a> who have contributed to the game!</div>",true)
+	makealert("credits","Credits","<div style='max-height:300px; overflow-y:auto;'>The Gold Factory by gamehelp16<br>Regilded by voxelbugged<br><br><b>---ORIGINAL CREDITS BELOW---</b><br><br>Ascii arts:<br><br>Factory, house, thunder, monster, castle, chest,<br>ghost, airplane, microscope, scroll, fox, rat:<br><a href='http://www.retrojunkie.com/asciiart/asciiart.htm' target='_blank'>http://www.retrojunkie.com/asciiart/asciiart.htm</a> (with a little modification)<br><hr>Cloud:<br><a href='http://www.geocities.com/spunk1111/nature.htm#clouds' target='_blank'>http://www.geocities.com/spunk1111/nature.htm#clouds</a><br>(taken from a \"landscape\")<br><hr>Computer:<br>aniwey (from Candy Box 2)<br><hr>Banner plane:<br><a href='http://www.asciiworld.com/-Planes-.html' target='_blank'>http://www.asciiworld.com/-Planes-.html</a> (with a little modification)<hr>Some other ascii arts are created by me :D<br><br><br>Inspired by:<br>The \"legendary\" <a href='http://candies.aniwey.net' target='_blank' onclick='candybox=true'>Candy Box</a> game<br>and <a href='http://adarkroom.doublespeakgames.net' target='_blank'>A Dark Room</a><br>and also <a href='http://candybox2.net' target='_blank' onclick='candybox=true'>Candy Box 2</a><br><br>Thanks to<br>Minecraft for the \"names\", enchanting, and some others :D<br><br>Also special thanks to:<br>- Redditors, people from cb2 forum, people from jayisgames.com for the bug reports, suggestions and critics<br>- Also thanks to <a href='https://github.com/gamehelp16/thegoldfactory/graphs/contributors' target='_blank'>several people</a> who have contributed to the game!</div>",true)
 }
 function showetc() {
 	closemessage();
@@ -1036,12 +1035,12 @@ function headache() {
 }
 function showbugs() {
 	closemessage();
-	makealert("bugs","Known Bugs & Glitches","<div style='max-height:300px; overflow-y:auto;'>Bugs list:<br>After battling (win / lose), please wait for around 5 seconds before battling again or you will get instant death<br />",true)
+	makealert("bugs","Known Bugs & Glitches","<div style='max-height:300px; overflow-y:auto;'>Bugs list:<br>After battling, please wait for around 5 seconds before battling again, or you might instantly die.<br />",true)
 }
 
 function showdec2021msg() {
 	closemessage();
-	makealert("dec2021msg","Message from the Developer (December 2021)","<div style='max-height:300px; overflow-y:auto;'>Hi! If you're reading this I just would like to thank you for playing this game up until now, honestly I didn't expect that this game still has quite a lot of players even 7+ years after its release!<br><br>I've received several messages from you guys asking if there are going to be new updates/content in this game so I'm going to use this opportunity to say that as of now I have no plans to update this game anymore. However, having said that I recently updated this game to improve some styling and made some minor updates!<br><br>If you enjoyed this game you can check out several other games I have made in the past:<ul><li><a href='https://gamehelp16.github.io/chickens/' target='_blank'>Chickens!</a></li><li><a href='https://gamehelp16.github.io/world-warper-ld30/' target='_blank'>World Warper</a></li><li><a href='https://gamehelp16.github.io/the-unconventional-weapon/' target='_blank'>The Unconventional Weapon</a></li><li><a href='https://gamehelp16.github.io/material-warrior/' target='_blank'>Material Warrior</a></li><li><a href='https://gamehelp16.github.io/which-subreddit/' target='_blank'>Which Subreddit?</a></li></ul>You can also check out this <a href='https://gamehelp16.github.io/post/welcome/' target='_blank'>blog post I made</a> where I list some other things that I have created just in case you're curious. It just feels amazing knowing that there people who are still playing something I made many years ago, so once again thank <i>you</i>! :)</div>",true)
+	makealert("dec2021msg","Message from the Developer (December 2021)","<div style='max-height:300px; overflow-y:auto;'>Hi! If you're reading this I just would like to thank you for playing this game up until now, honestly I didn't expect that this game still has quite a lot of players even 7+ years after its release!<br><br>I've received several messages from you guys asking if there are going to be new updates/content in this game so I'm going to use this opportunity to say that as of now I have no plans to update this game anymore. However, having said that I recently updated this game to improve some styling and made some minor updates!<br><br>If you enjoyed this game you can check out several other games I have made in the past:<ul><li><a href='https://gamehelp16.github.io/chickens/' target='_blank'>Chickens!</a></li><li><a href='https://gamehelp16.github.io/world-warper-ld30/' target='_blank'>World Warper</a></li><li><a href='https://gamehelp16.github.io/the-unconventional-weapon/' target='_blank'>The Unconventional Weapon</a></li><li><a href='https://gamehelp16.github.io/material-warrior/' target='_blank'>Material Warrior</a></li><li><a href='https://gamehelp16.github.io/which-subreddit/' target='_blank'>Which Subreddit?</a></li></ul>You can also check out this <a href='https://gamehelp16.github.io/post/welcome/' target='_blank'>blog post I made</a> where I list some other things that I have created just in case you're curious. It just feels amazing knowing that there people who are still playing something I made many years ago, so once again thank <i>you</i>! :) <br><br><i>And thank you for making this amazing game! -voxelbugged</i></div>",true)
 }
 function dighole() {
 	if(items[2].owned==0) {
@@ -1050,8 +1049,8 @@ function dighole() {
 	else {
 		powerhp();
 		closemessage();
-		battle=makebattle(Math.round(Math.random()*100),"Thief",100,100,"Handmade Sword",3,"A thief, nothing else",0,power,hp,hp,currentsword,false,"vs-thief");
-		html="<div class=\"alert alert-battle1\"><b>Attacked!</b><br>While you are digging the hole, suddenly someone runs towards you and tried to attack you<br><br>"+battle.html+"</div>";
+		battle=makebattle(Math.round(Math.random()*100),"Thief",100,100,"Handmade Sword",3,"A thief, nothing else.",0,power,hp,hp,currentsword,false,"vs-thief");
+		html="<div class=\"alert alert-battle1\"><b>Attacked!</b><br>While you are digging the hole, suddenly someone runs towards you and tries to attack you!<br><br>"+battle.html+"</div>";
 		$("#otheralerts").append(html);
 		battle.init();
 		$(".alert-battle1").fadeIn("fast");
@@ -1060,7 +1059,7 @@ function dighole() {
 function continuedigging() {
 	powerhp();
 	battle=makebattle(Math.round(Math.random()*100),"Worms",80,80,"Their body",15,"Worms!",1,power,hp,hp,currentsword,false,"vs-worms");
-	html="<div class=\"alert alert-battle2\"><b>Worms! :o</b><br>There are worms under the ground!<br>They seemed to be mad because you destroyed their home<br><br>"+battle.html+"</div>";
+	html="<div class=\"alert alert-battle2\"><b>Worms! :o</b><br>There are worms under the ground!<br>They seemed to be mad because you destroyed their home.<br><br>"+battle.html+"</div>";
 	$("#otheralerts").append(html);
 	battle.init();
 	closemessage();
@@ -1087,17 +1086,17 @@ function makekey() {
 }
 function learnnewskill() {
 	closemessage();
-	makealert("choose-skill","Choose a skill","Choose a skill that you want to learn (choose wisely because you can't change after choosing)<br><br><input type=\"button\" value=\"Thunder Bolt\" onclick=\"chooseskill(1)\"><br><input type=\"button\" value=\"Invulnerability\" onclick=\"chooseskill(2)\">",true)
+	makealert("choose-skill","Choose a skill","Choose a skill that you want to learn (choose wisely, because you can't change after choosing!)<br><br><input type=\"button\" value=\"Thunder Bolt\" onclick=\"chooseskill(1)\"><br><input type=\"button\" value=\"Invulnerability\" onclick=\"chooseskill(2)\">",true)
 }
 function chooseskill(type) {
 	closemessage();
 	if(type==1) {
 		skill="thunder";
-		makealert("get-skill","Thunder Bolt","Now you can upgrade this skill by visiting the training center",true)
+		makealert("get-skill","Thunder Bolt","Now you can upgrade this skill by visiting the training center!",true)
 	}
 	else {
 		skill="invuln";
-		makealert("get-skill","Invulnerability","Now you can upgrade this skill by visiting the training center",true)
+		makealert("get-skill","Invulnerability","Now you can upgrade this skill by visiting the training center!",true)
 	}
 }
 function upgradeskill() {
@@ -1117,8 +1116,8 @@ function doupgrade() {
 	}
 }
 function buythefactory() {
-	if(goldbar>=5000) {
-		goldbar-=5000;
+	if(goldbar>=2500) {
+		goldbar-=2500;
 		gbps=3;
 		goldmining=30;
 		buyfactory=true;
@@ -1180,8 +1179,8 @@ function castlegotoking(myfinalhp) {
 	$(".alert-castle-king").fadeIn("fast");
 }
 function buyairplane() {
-	if(ironbar>=5000000) {
-		ironbar-=5000000;
+	if(ironbar>=50000) {
+		ironbar-=50000;
 		checkthings();
 		hasairplane=true;
 		makealert("get-airplane","You have an airplane now","The airplane is yours now</pre>",true);
@@ -1275,11 +1274,11 @@ function showstorage() {
 }
 function changelog() {
 	closemessage();
-	makealert("changelog","Changelog","<div style='max-height:300px; overflow-y:auto;'>08 December 2021<br>- Styling and other minor updates<br><br>12 January 2014<br>- Iron mining machine price is a bit cheaper<br>- Reset game button added<br>- A super minor change (you don't need to know about this, actually)<br>- Zombie king is a bit easier to kill<br>- Each level of thunder skill now gives 7 more attack instead of 5<br><br>04 January 2014<br>- Fixed bug in the old machine <br><br>03 January 2014<br>- Version 1.0 released! (finally :D)<br>- There is something new in the end of 'the digging'<br><br>24 December 2013:<br>- Airplane price is now 5 million iron bars instead of 9 million! <br><br>20 December 2013:<br>- <a href='http://www.reddit.com/r/thegoldfactory/comments/1tbmnk/20_dec_2013_update_version_094_beta/' target='_blank'>Updates</a><br><br>18 December 2013:<br>- Some fixes thanks to <a href='https://github.com/Stevie-O' target='_blank'>Stevie-O</a><br>- <a href='http://www.reddit.com/r/thegoldfactory/comments/1t5g6i/18_dec_2013_update_093_beta/' target='_blank'>Updates</a><br><br>14 December 2013:<br>- <a href='http://www.reddit.com/r/thegoldfactory/comments/1sv65j/updates_2/' target='_blank'>Bug fixes & Updates</a><br><br>13 December 2013:<br>- <a href='http://www.reddit.com/r/thegoldfactory/comments/1ss7u8/updates/' target='_blank'>Lots of updates</a><br><br>11 December 2013:<br>- Version 1.0 Beta released!<br>- Bug fix</div>",true);
+	makealert("changelog","Changelog",'<div style="max-height:300px;overflow-y:auto">18 February 2024<br>- Rebalanced prices and rewards to make the gameplay smoother<br>- Fixed various grammar and spelling mistakes<br>- Many other QoL changes and bugfixes!<br><br><b>---ORIGINAL CHANGELOG BELOW--</b><br><br>08 December 2021<br>- Styling and other minor updates<br><br>12 January 2014<br>- Iron mining machine price is a bit cheaper<br>- Reset game button added<br>- A super minor change (you don\'t need to know about this, actually)<br>- Zombie king is a bit easier to kill<br>- Each level of thunder skill now gives 7 more attack instead of 5<br><br>04 January 2014<br>- Fixed bug in the old machine<br><br>03 January 2014<br>- Version 1.0 released! (finally :D)<br>- There is something new in the end of \'the digging\'<br><br>24 December 2013:<br>- Airplane price is now 5 million iron bars instead of 9 million!<br><br>20 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1tbmnk/20_dec_2013_update_version_094_beta/" target="_blank">Updates</a><br><br>18 December 2013:<br>- Some fixes thanks to<a href="https://github.com/Stevie-O" target="_blank">Stevie-O</a><br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1t5g6i/18_dec_2013_update_093_beta/" target="_blank">Updates</a><br><br>14 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1sv65j/updates_2/" target="_blank">Bug fixes & Updates</a><br><br>13 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1ss7u8/updates/" target="_blank">Lots of updates</a><br><br>11 December 2013:<br>- Version 1.0 Beta released!<br>- Bug fix</div>',true);
 }
 function armorshop() {
 	closemessage();
-	makealert("armor-shop","Armor Section","We sell armors too! Buy some armors to absorb damages from your enemies!<br><br>Your stats: <span class=\'absorb-percent'>0</span>% damage absorbed<br><br><div class='helmet-area'>Helmet: <input type=\"button\" value=\"Buy a leather helmet\" onclick=\"buyarmor('helmet')\" class=\"button-buy-helmet\"> (<span class=\"buy-helmet-price\">0</span> gold bars)</div><div class='chestplate-area'>Chestplate: <input type=\"button\" value=\"Buy a leather chestplate\" onclick=\"buyarmor('chestplate')\" class=\"button-buy-chestplate\"> (<span class=\"buy-chestplate-price\">0</span> gold bars)</div><div class='pants-area'>Pants: <input type=\"button\" value=\"Buy a leather pants\" onclick=\"buyarmor('pants')\" class=\"button-buy-pants\"> (<span class=\"buy-pants-price\">0</span> gold bars)</div><div class='boots-area'>Boots: <input type=\"button\" value=\"Buy a leather boots\" onclick=\"buyarmor('boots')\" class=\"button-buy-boots\"> (<span class=\"buy-boots-price\">0</span> gold bars)</div>",true)
+	makealert("armor-shop","Armor Section","We sell armor too! Buy some to absorb damage from your enemies!<br><br>Your stats: <span class=\'absorb-percent'>0</span>% damage absorbed<br><br><div class='helmet-area'>Helmet: <input type=\"button\" value=\"Buy a leather helmet\" onclick=\"buyarmor('helmet')\" class=\"button-buy-helmet\"> (<span class=\"buy-helmet-price\">0</span> gold bars)</div><div class='chestplate-area'>Chestplate: <input type=\"button\" value=\"Buy a leather chestplate\" onclick=\"buyarmor('chestplate')\" class=\"button-buy-chestplate\"> (<span class=\"buy-chestplate-price\">0</span> gold bars)</div><div class='pants-area'>Pants: <input type=\"button\" value=\"Buy a leather pants\" onclick=\"buyarmor('pants')\" class=\"button-buy-pants\"> (<span class=\"buy-pants-price\">0</span> gold bars)</div><div class='boots-area'>Boots: <input type=\"button\" value=\"Buy a leather boots\" onclick=\"buyarmor('boots')\" class=\"button-buy-boots\"> (<span class=\"buy-boots-price\">0</span> gold bars)</div>",true)
 	checkthings();
 }
 function buyarmor(armor) {
@@ -1457,18 +1456,11 @@ man="\n\
 	}
 }
 function eatpizza() {
-	if(Math.random()<=0.5) {
 		makealert("pizzas-not-rotten","Nom.. nom..","You eat the pizzas, luckily they are not rotten",true);
 		eaten=randomnumber(10,50);
 		items[3].owned+=eaten;
 		checkthings();
 		pizzaeaten=true;
-	}
-	else {
-		makealert("pizzas-rotten","Nom.. nom..","You eat the pizzas, but... they are rotten!<br>You are poisoned, this causes you to die easily in battles even if you have a lot of hp<br><br>Luckily you can heal yourself by drinking 10 health potions<br><br><input type=\"button\" value=\"Drink 10 health potions\" onclick=\"healme()\">",true);
-		poisoned=true;
-		pizzaeaten=true;
-	}
 }
 function healme() {
 	if(items[7].owned>=10) {
@@ -1570,11 +1562,11 @@ computer="                                            _________________\n\
 		}
 		else if(passgate&&!buyfactory) {
 			closemessage();
-			makealert("buy-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary<br><br><input type=\"button\" value=\"Buy this factory\" onclick=\"buythefactory()\" class=\"buy-factory-button\"> for 10000 goldbars and get more goldbars each second!",true)
+			makealert("buy-factory","The Gold Factory","Status: You work here, and you get 1 gold bar per second as the salary.<br><br><input type=\"button\" value=\"Buy this factory\" onclick=\"buythefactory()\" class=\"buy-factory-button\"> for 10000 goldbars and get more goldbars each second!",true)
 		}
 		else if(passgate&&buyfactory) {
 			closemessage();
-			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>Currently you have <span class=\"gold-mining\">"+goldmining+"</span> mining machines<br>Production: <span class=\"gbps\">"+gbps+"</span> goldbars / second<br><br><input type=\"button\" value=\"Buy 1 mining machine\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold\"> (<span class=\"10-gold-cost\">"+goldprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold\"> (<span class=\"100-gold-cost\">"+goldprice*100+"</span> Iron Bars)<br><br>Tips: Buying 100 machines once is cheaper than buying 1 machine 100 times",true)
+			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>Currently you have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold\"> (<span class=\"10-gold-cost\">"+goldprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold\"> (<span class=\"100-gold-cost\">"+goldprice*100+"</span> Iron Bars)<br><br>Tip: Buying 100 machines once is cheaper than buying 10 machines 10 times.",true)
 		}
 		$(".ylvis-the-fox").hide();
 	}
@@ -1827,7 +1819,7 @@ function localstoragehelp() {
 }
 
 function save() {
-	makealert("save","Save game","Here you can save your progress (Since i'm not sure if the saving works well or not, so I recommend you to save the game as text too, in case there are some errors)<br><br><input type='button' value='Save game' onclick='dosave(\"localstorage\")'> (Uses HTML5 Local Storage <small>[<a href='javascript:localstoragehelp();' title='What is HTML5 Local Storage???'>?</a>]</small>)<br><input type='button' value='Save game as text' onclick='dosave(\"text\")'><br><input type='button' value='Load game' onclick='dosave(\"load\")'><br><input type='button' value='Reset game' onclick='dosave(\"reset\")'><br><input type='button' value='Toggle autosave' onclick='dosave(\"autotoggle\")'> Game autosaves in <span id='autosavetime'>"+autosavetime+"</span> second(s)",true);
+	makealert("save","Save game","Here you can save your progress.<br><br><input type='button' value='Save game' onclick='dosave(\"localstorage\")'> (Uses HTML5 Local Storage <small>[<a href='javascript:localstoragehelp();' title='What is HTML5 Local Storage???'>?</a>]</small>)<br><input type='button' value='Save game as text' onclick='dosave(\"text\")'><br><input type='button' value='Load game' onclick='dosave(\"load\")'><br><input type='button' value='Reset game' onclick='dosave(\"reset\")'><br><input type='button' value='Toggle autosave' onclick='dosave(\"autotoggle\")'> Game autosaves in <span id='autosavetime'>"+autosavetime+"</span> second(s)",true);
 }
 
 function dosave(param) {
@@ -2675,7 +2667,7 @@ function winbattle(param,id) {
 	if(param=="vs-thief") {
 		passthief=true;
 		closemessage();
-		makealert("new-shop","Thanks!","Hi, i'm Andrew, thanks for helping us kill the thief!<br>Btw I just built a new shop, maybe you want to buy something",true);
+		makealert("new-shop","Thanks!","Hi, I'm Andrew! Thanks for helping us kill the thief!<br>By the way, I just built a new shop, maybe you'd want to buy something!",true);
 		checkthings();
 	}
 	else if(param=="vs-worms"){
@@ -2692,8 +2684,8 @@ function winbattle(param,id) {
 	else if(param=="vs-monster"){
 		closemessage();
 		unlockenchant=true;
-		makealert("enchant-unlocked","Enchanting shop","You can visit enchanting shop and enchant your sword now!<br>And the owner of the enchanting shop gives you 5000 goldbars as a reward!",true);
-		goldbar+=5000;
+		makealert("enchant-unlocked","Enchanting shop","You can visit the enchanting shop and enchant your sword!<br>The owner of the enchanting shop gave you 2000 gold bars as a reward!",true);
+		goldbar+=2000;
 	}
 	else if(param=="vs-ghost"){
 		closemessage();
@@ -2708,8 +2700,8 @@ chest='\n\
 % \\ | %  ))   |\n\
 %  \\|%________|\n\
  %%%%';
-		goldbar+=10000;
-		html="<div class=\"alert alert-chest-unlocked\"><b>A Chest!</b><br>The chest contains 5000 goldbars + an ancient scroll<br><br><pre>"+chest+"</pre><br><br><input type=\"button\" value=\"Read scroll\" onclick=\"readscroll()\"></div>";
+		goldbar+=2500;
+		html="<div class=\"alert alert-chest-unlocked\"><b>A Chest!</b><br>The chest contains 2500 gold bars and an ancient scroll.<br><br><pre>"+chest+"</pre><br><br><input type=\"button\" value=\"Read scroll\" onclick=\"readscroll()\"></div>";
 		$("#otheralerts").append(html);
 		closemessage();
 		$(".alert-chest-unlocked").fadeIn("fast");
@@ -2817,13 +2809,13 @@ function dig(countdown,cheat) {
 		}
 		if(countdown) {
 			if(digcountdown==999999999) {
-				digcountdown=30;
+				digcountdown=10;
 				closemessage();
 				dig(true,false);
 				digabcd=setInterval(function(){digcountdown--;},60000);
 			}
 			else {
-				makealert("dig-countdown","Digging","You are currently digging<br>Time left: <span class='digcd'>"+digcountdown+"</span> 	minute(s) remaining",true);
+				makealert("dig-countdown","Digging","You are currently digging.<br>Time left: <span class='digcd'>"+digcountdown+"</span> 	minute(s) remaining.",true);
 			}
 			return;
 		}
@@ -3050,16 +3042,16 @@ function mixitems() {
 
 function makebosshappy() {
 	closemessage();
-	makealert("how-to-make-boss-happy","Make your boss happier","To make him happier and get some bonus gold bars, you can do these things:<br><br><input type='button' value='Kill some rats that sometimes enter the factory at night' onclick='killrats()'><br><input type='button' value='Help him ciphering codes' onclick='ciphercode()'>",true);
+	makealert("how-to-make-boss-happy","Make your boss happier","To make him happier and get some extra gold bars, you can do these things:<br><br><input type='button' value='Kill some rats that sometimes enter the factory at night' onclick='killrats()'><br><input type='button' value='Help him decipher messages' onclick='ciphercode()'>",true);
 }
 function killrats() {
 	if(items[2].owned==0) {
 		closemessage();
-		makealert("no-weapon","No weapon","Oh snap, it seems that you don't have any weapon therefore you can't kill rats",true);
+		makealert("no-weapon","No weapon","Oh snap! It seems that you don't have any weapon, therefore you can't kill rats.",true);
 	}
 	else {
 		closemessage();
-		makealert("kill-rats","Kill some rats","For you, searching the rats is not a big deal, the problem is the stronger you are, the rats are stronger too! :o<br><br><input type='button' value=\"I'm ready!\" onclick='battlevsrats()'>",true);
+		makealert("kill-rats","Kill some rats","Searching for the rats is not a big deal, the problem is the stronger you are, the stronger the rats are, too! :o<br><br><input type='button' value=\"I'm ready!\" onclick='battlevsrats()'>",true);
 	}
 }
 function ciphercode() {
@@ -3083,7 +3075,7 @@ function ciphercode() {
 	}
 
 	if(cipherstep<5) {
-		makealert("help-ciphering","Cipher some codes","Your boss loves ciphering codes, but he is busy. If you can help him, he promise to give you bonus gold bars as a reward.<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='Submit' onclick='checkchipher()'>",true);
+		makealert("help-ciphering","Decipher some messages","Your boss loves to decipher messages, but he is busy. If you can help him, he promises to give you bonus gold bars as a reward!<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='Submit' onclick='checkchipher()'>",true);
 	}
 	else {
 		makealert("no-more-codes","No more codes","Sorry, there are no more codes to cipher",true);
@@ -3093,7 +3085,7 @@ function battlevsrats() {
 	if(items[2].owned!=0) {
 		powerhp();
 		hpdivide=Math.ceil(hp/4.5);
-		battle=makebattle(Math.round(Math.random()*100),"A Rat",hp-hpdivide,hp-hpdivide,"Their body",power-Math.ceil(power/2.5),"An annoying rat",11,power,hp,hp,currentsword,false,"vs-rat");
+		battle=makebattle(Math.round(Math.random()*100),"A Rat",hp-hpdivide,hp-hpdivide,"Their body",power-Math.ceil(power/2.5),"An annoying rat.",11,power,hp,hp,currentsword,false,"vs-rat");
 		html="<div class=\"alert alert-battle-rats\"><b>Rat!</b><br>Kill it!!<br><br>"+battle.html+"</div>";
 		$("#otheralerts").append(html);
 		battle.init();
@@ -3113,9 +3105,9 @@ function checkchipher() {
 	if(cipherstep==0) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="master branch") {
 			cipherstep++;
-			goldbar+=200;
+			goldbar+=100;
 			closemessage();
-			alert("Correct! But since this is an easy one, you 'only' get 200 gold bars");
+			alert("Correct! Since this is an easy one, you only get 100 gold bars.");
 		}
 		else {
 			alert('Wrong! Hint: ABC, Its easy as 123!');
@@ -3124,31 +3116,31 @@ function checkchipher() {
 	else if(cipherstep==1) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="there is a treasure hidden somewhere, it is located at a secret place in the pacific ocean") {
 			cipherstep++;
-			goldbar+=1000;
+			goldbar+=500;
 			closemessage();
-			alert("Correct! You get 1000 gold bars!");
+			alert("Correct! You get 500 gold bars!");
 		}
 		else {
-			alert('Wrong! Hint: The Romans would be furious with you.');
+			alert('Wrong! Hint: The Romans would be furious with you!');
 		}
 	}
 	else if(cipherstep==2) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="in a world full of blocks") {
 			cipherstep++;
-			goldbar+=2000;
+			goldbar+=1000;
 			closemessage();
-			alert("Correct! You get 2000 gold bars!");
+			alert("Correct! You get 1000 gold bars!");
 		}
 		else {
-			alert('Wrong! Hint: You use this to type with!');
+			alert('Wrong! Hint: You use this to type!');
 		}
 	}
 	else if(cipherstep==3) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="the plant is famous because of the ability to cure some diseases") {
 			cipherstep++;
-			goldbar+=2500;
+			goldbar+=1250;
 			closemessage();
-			alert("Correct! You get 2500 gold bars!");
+			alert("Correct! You get 1250 gold bars!");
 		}
 		else {
 			alert('Wrong! Hint: (8*4) - 16 + ((24/2) *4)');
@@ -3157,12 +3149,12 @@ function checkchipher() {
 	else if(cipherstep==4) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="the gold factory was built long time ago, and it is the most famous gold factory in the world") {
 			cipherstep++;
-			goldbar+=7500;
+			goldbar+=2500;
 			closemessage();
-			alert("Correct! Because this one is a hard one, you get 7500 gold bars!");
+			alert("Correct! Because this is a hard one, you get 2500 gold bars!");
 		}
 		else {
-			alert('Wrong! Hint: Feel on the rails and on the fence? Combine em and keep going!');
+			alert('Wrong! Hint: You know the rails and the fence? Combine \'em and keep going!');
 		}
 	}
 }

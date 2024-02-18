@@ -3,13 +3,14 @@
 
 <!--
 	WARNING:
-	 Reading source code may spoil things in this game
+	 Reading the source code may spoil things in this game!
 	 Read with caution!
+   Also, click the rightmost cloud a few times for a nice bonus ;)
 -->
 
 <head>
 	<meta charset="UTF-8">
-	<title>The Gold Factory</title>
+	<title>The Gold Factory: Regilded</title>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="base.js"></script>
 
@@ -18,27 +19,17 @@
 
 	<!-- Thanks to /u/Shawnyall and /u/Guildenstern_artist for the favicon! -->
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46365363-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-46365363-1');
-	</script>
-
 </head>
 <body>
 <div id="storage">
-	Storage:<br>
+	Inventory:<br>
 	<div id="insidestorage">
 		<span id="gold-bar">0</span> gold bar(s)<br>
 		<span id="ib"><span id="iron-bar">0</span> iron bar(s)</span><br>
-		<a href="javascript:showstorage();">View complete storage</a>
+		<a href="javascript:showstorage();">View inventory</a>
 	</div>
-	You have eaten <span class="pizzacount">0 pizzas</span><br>
-	Current weapon: <span class="currentsword">none</span>
+	You have eaten <span class="pizzacount">0 pizzas</span>.<br>
+	Current weapon: <span class="currentsword">none</span>.
 </div>
 
 <div class="modal"></div>
@@ -62,13 +53,13 @@ Status: You work here, and you get 1 gold bar per second as the salary
 
 <div class="alert alert-theshop">
 <b>The Shop</b><br>
-What do you want to buy sir?<br><br>
+What do you want to buy, sir?<br><br>
 <input type="button" value="A shovel" onclick="buy('shovel',1)" class="buy-shovel" disabled> (50 gold bars)<br>
 <input type="button" value="Pizza" onclick="buy('pizza',1)" class="buy-pizza" disabled> (20 gold bars)<br>
 <input type="button" value="20 Pizzas" onclick="buy('pizza',20)" class="buy-pizza-20" disabled> (400 gold bars)<br>
 <span class="wooden-sword-shop"><input type="button" value="Wooden sword" onclick="buy('wooden sword',1)" class="buy-wooden-sword" disabled> (150 gold bars)</span>
 <span class="stone-sword-shop" style="display:none;"><input type="button" value="Stone sword" onclick="buy('stone sword',1)" class="buy-stone-sword" disabled> (500 gold bars)</span>
-<span class="no-sword-upgrade" style="display:none;">Sorry, stone sword is the best sword I have</span>
+<span class="no-sword-upgrade" style="display:none;">Sorry, the stone sword is the best sword I have.</span>
 <br><br>
 <input type="button" value="Close this window" onclick="closemessage()">
 </div>
@@ -79,9 +70,9 @@ Hi! Welcome to my shop! :D<br><br>
 <input type="button" value="10 Iron Bars" onclick="goldbar-=100; ironbar+=10; checkthings();" class="buy-iron-bar" disabled> (100 gold bars)<br>
 <input type="button" value="100 Pizzas" onclick="buy('pizza',100)" class="buy-pizza-20" disabled> (2000 gold bars)<br>
 <input type="button" value="Health Potion" onclick="buy('health potion',1)" class="buy-health-potion"> (50 gold bars)<br>
-<span class="iron-sword-shop"><input type="button" value="Iron sword" onclick="buy('iron sword',1)" class="buy-iron-sword" disabled> (2000 gold bars, and please make sure you have a stone sword)</span>
-<span class="diamond-sword-shop" style="display:none;"><input type="button" value="Diamond sword" onclick="buy('diamond sword',1)" class="buy-diamond-sword" disabled> (5000 gold bars)</span>
-<span class="need-iron" style="display:none;">Sorry, i have no more swords</span>
+<span class="iron-sword-shop"><input type="button" value="Iron sword" onclick="buy('iron sword',1)" class="buy-iron-sword" disabled> (1000 gold bars, and please make sure you have a stone sword)</span>
+<span class="diamond-sword-shop" style="display:none;"><input type="button" value="Diamond sword" onclick="buy('diamond sword',1)" class="buy-diamond-sword" disabled> (3000 gold bars)</span>
+<span class="need-iron" style="display:none;">Sorry, I have no more swords :(</span>
 <br><br>
 <input type="button" value="Close this window" onclick="closemessage()">
 </div>
@@ -95,7 +86,7 @@ Hi! Welcome to my shop! :D<br><br>
 
 <div class="alert alert-dig-step-1">
 <b>A hole</b><br>
-This is an "unfinished" hole<br><br>
+This is an "unfinished" hole.<br><br>
 <input type="button" value="Continue digging" onclick="continuedigging()">
 <input type="button" value="Close this window" onclick="closemessage()">
 </div>
@@ -103,21 +94,6 @@ This is an "unfinished" hole<br><br>
 <div id="otheralerts"></div>
 
 <div id="skyspace"></div>
-<div class="banner-plane world1">
-<pre>
-\--------------------------------------------------------------------------------------------------------\
- \                                                                                                        \
-  \                                                                                                        \        __
-   \                                                                                                        \       | \
-    >                                                                                                        >------|  \       ______
-   /                                                                                                        /       --- \_____/**|_|_\____  |
-  /                                                                                                        /          \_______ --------- __>-}
- /                                                                                                        /              /  \_____|_____/   |
-/--------------------------------------------------------------------------------------------------------/              *         |
-                                                                                                                                 {O}
-</pre>
-<div class="ads"><iframe data-aa='650128' src='//ad.a-ads.com/650128?size=728x90' scrolling='no' style='width:728px; height:90px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe></div>
-</div>
 <div id="wrapper">
 <div id="sky">
 <pre class="cloud cloud-1">
@@ -435,10 +411,9 @@ ____________<span class="click old-machine" title="An old machine">|______|</spa
 </div>
 </div>
 
-<div id="version">Version: <a href="javascript:changelog();" class="leversion"></a></div>
-<div class="bubble"><b>Check out the new 2021 message!</b></div>
+<div id="version"><a href="javascript:changelog();" class="leversion"></a> - TGF: Regilded by voxelbugged - <a href="https://gamehelp16.github.io/thegoldfactory/">Original game</a> by gamehelp16</div>
 <div id="credits">
-<a href="javascript:showdec2021msg();" class="dec2021msg">Dec 2021 Message</a> - <a href="javascript:showbugs();" class="bugs">Bugs</a> - <a href="javascript:showcredits();">Credits</a> - <a href="javascript:showetc();">Etc</a> - <a href="javascript:save();">Save</a> - <a href="javascript:toggle();">Toggle Color</a>
+<a href="javascript:showdec2021msg();" class="dec2021msg">gamehelp16's Dec 2021 Message</a> - <a href="javascript:showbugs();" class="bugs">Bugs</a> - <a href="javascript:showcredits();">Credits</a> - <a href="javascript:save();">Save</a> - <a href="javascript:toggle();">Toggle Color</a>
 </div>
 
 <div id="realworld">
