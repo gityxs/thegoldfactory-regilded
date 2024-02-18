@@ -395,8 +395,8 @@ function buy(item,number) {
 }
 function buyminingmachine(amount) {
 	theprice=ironprice*amount;
-	if(ironbar>=theprice) {
-		ironbar-=theprice;
+	if(goldbar>=theprice) {
+		goldbar-=theprice;
 		ironmining+=amount;
 		checkthings();
 		clearInterval(a);
@@ -632,7 +632,7 @@ $(document).ready(function() {
 		if(passworms) {
 			closemessage();
 			irontime=second2name(ibtime);
-			makealert("mining","Iron Mine","The iron mine allows you to get some iron bar(s) each hour / min / sec<br><br>Currently you have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machines.<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+ironprice*10+"</span> Iron Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+ironprice*100+"</span> Iron Bars)<br><br>Tip: Buying 100 machines once is cheaper than buying 10 machines 10 times.",true)
+			makealert("mining","Iron Mine","The iron mine allows you to get some iron bar(s) each hour / min / sec<br><br>Currently you have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machines.<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+ironprice*10+"</span> Gold Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+ironprice*100+"</span> Gold Bars)<br><br>Tip: Buying 100 machines once is cheaper than buying 10 machines 10 times.",true)
 		}
 	});
 	$(".gate").click(function() {
