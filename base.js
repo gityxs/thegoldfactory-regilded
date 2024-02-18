@@ -2041,7 +2041,7 @@ function dosave(param) {
 				c=confirm("Ok, the last confirmation, are you sure? Remember, this can't be undone");
 				if(c) {
 
-					localStorage.thegoldfactorygamesave=btoa("0|0|1|0|0|3600|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|You|This is you.|0|0|0|0|false|false|false|0|false|false|none|0|0|0|0|false|0|999999999|999999999|0|none|false|false|false|false|false|false|false|false|false|false|false|false")+"encrypted";
+					localStorage.clear();
 					checkthings();
 
 					alert('Localstorage cleared, please refresh the page for\nchanges to apply (don\'t save before refreshing!)');
