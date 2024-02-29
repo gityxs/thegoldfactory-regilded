@@ -516,7 +516,10 @@ body {
 
 @media (any-pointer: coarse) {
 	body {
-		font-size:1.3em;
+		font-size:1.4em;
+	}
+	img {
+		height:140%;
 	}
 }
 
@@ -996,7 +999,10 @@ body.wob [class^=buttons-] input[type=button]:disabled {
 	background:rgba(255,255,255,.3);
 }
 img {
-	opacity:0;
+	opacity:1;
+	position:absolute;
+	left:1%;
+	height:1em;
 }
 .bubble {
 	position: fixed;

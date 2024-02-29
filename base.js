@@ -456,7 +456,7 @@ function enchantsword(type) {
 }
 $(document).ready(function() {
 
-	$('.leversion').html("1.v1");
+	$('.leversion').html("1.v1.1");
 
 	goldbar=0; //0
 	ironbar=0; //0
@@ -878,10 +878,10 @@ computer="                                            _________________\n\
                  )    (                    |                 |\n\
                 /      \\                   |                 |\n\
                /________\\                  |_________________|";
-		makealert("the-house-enter","The house","<div style='max-height:300px; width:538px; overflow-y:auto;'>You entered the house, and you see a computer in front of you<br><br><pre class='computer-ascii'>"+computer+"</pre><div class='ylvis-the-fox'></div></div>",true);
+		makealert("the-house-enter","The house","<div style='max-height:300px; width:538px; overflow-y:auto;'>You enter the house, and you see a computer in front of you...<br><br><pre class='computer-ascii'>"+computer+"</pre><div class='ylvis-the-fox'></div></div>",true);
 	});
 	$(".sand").click(function() {
-		makealert("sand","Sand","There are tons of sand here, you don't know who put it there and what is buried there.<br><br><input type='button' value='Search for something!' onclick='searchsand()'> <span class='search-result'></span><br><input type='button' value='Bury yourself inside the sand!' onclick='burysand()'>",true);
+		makealert("sand","Sand","There is a lot of sand here, you don't know who put it here and what is buried underneath.<br><br><input type='button' value='Search for stuff!' onclick='searchsand()'> <span class='search-result'></span><br><input type='button' value='Bury yourself inside the sand!' onclick='burysand()'>",true);
 	});
 	$(".boss").click(function() {
 		if(!win) {
@@ -1270,7 +1270,7 @@ function showstorage() {
 }
 function changelog() {
 	closemessage();
-	makealert("changelog","Changelog",'<div style="max-height:300px;overflow-y:auto">18 February 2024<br>- Rebalanced prices and rewards to make the gameplay smoother<br>- Fixed various grammar and spelling mistakes<br>- More difficult enemy encounters<br>- Many other QoL changes and bugfixes!<br><br><b>---ORIGINAL CHANGELOG BELOW--</b><br><br>08 December 2021<br>- Styling and other minor updates<br><br>12 January 2014<br>- Iron mining machine price is a bit cheaper<br>- Reset game button added<br>- A super minor change (you don\'t need to know about this, actually)<br>- Zombie king is a bit easier to kill<br>- Each level of thunder skill now gives 7 more attack instead of 5<br><br>04 January 2014<br>- Fixed bug in the old machine<br><br>03 January 2014<br>- Version 1.0 released! (finally :D)<br>- There is something new in the end of \'the digging\'<br><br>24 December 2013:<br>- Airplane price is now 5 million iron bars instead of 9 million!<br><br>20 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1tbmnk/20_dec_2013_update_version_094_beta/" target="_blank">Updates</a><br><br>18 December 2013:<br>- Some fixes thanks to<a href="https://github.com/Stevie-O" target="_blank">Stevie-O</a><br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1t5g6i/18_dec_2013_update_093_beta/" target="_blank">Updates</a><br><br>14 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1sv65j/updates_2/" target="_blank">Bug fixes & Updates</a><br><br>13 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1ss7u8/updates/" target="_blank">Lots of updates</a><br><br>11 December 2013:<br>- Version 1.0 Beta released!<br>- Bug fix</div>',true);
+	makealert("changelog","Changelog",'<div style="max-height:300px;overflow-y:auto">29 February 2024<br>- A few tweaks to make the game more playable on mobile<br>- Small grammar fixes<br><br>18 February 2024<br>- Rebalanced prices and rewards to make the gameplay smoother<br>- Fixed various grammar and spelling mistakes<br>- More difficult enemy encounters<br>- Many other QoL changes and bugfixes!<br><br><b>---ORIGINAL CHANGELOG BELOW--</b><br><br>08 December 2021<br>- Styling and other minor updates<br><br>12 January 2014<br>- Iron mining machine price is a bit cheaper<br>- Reset game button added<br>- A super minor change (you don\'t need to know about this, actually)<br>- Zombie king is a bit easier to kill<br>- Each level of thunder skill now gives 7 more attack instead of 5<br><br>04 January 2014<br>- Fixed bug in the old machine<br><br>03 January 2014<br>- Version 1.0 released! (finally :D)<br>- There is something new in the end of \'the digging\'<br><br>24 December 2013:<br>- Airplane price is now 5 million iron bars instead of 9 million!<br><br>20 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1tbmnk/20_dec_2013_update_version_094_beta/" target="_blank">Updates</a><br><br>18 December 2013:<br>- Some fixes thanks to<a href="https://github.com/Stevie-O" target="_blank">Stevie-O</a><br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1t5g6i/18_dec_2013_update_093_beta/" target="_blank">Updates</a><br><br>14 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1sv65j/updates_2/" target="_blank">Bug fixes & Updates</a><br><br>13 December 2013:<br>-<a href="http://www.reddit.com/r/thegoldfactory/comments/1ss7u8/updates/" target="_blank">Lots of updates</a><br><br>11 December 2013:<br>- Version 1.0 Beta released!<br>- Bug fix</div>',true);
 }
 function armorshop() {
 	closemessage();
@@ -1322,7 +1322,7 @@ man="\n\
            spent a lot of     |\n\
            time to get here! / \\";
 
-			$(".talk-with-dude").val("Yeah, it's a long journey");
+			$(".talk-with-dude").val("Yeah, it's a long journey...");
 			$(".fight-with-dude").hide();
 			$(".give-secret-potion").hide();
 		}
@@ -1333,7 +1333,7 @@ man="\n\
                               |\n\
                              / \\";
 
-			$(".talk-with-dude").val("I have no idea too!");
+			$(".talk-with-dude").val("I have no idea either!");
 			$(".fight-with-dude").hide();
 			$(".give-secret-potion").hide();
 		}
@@ -1658,7 +1658,7 @@ function guy(step) {
 	if(step==1) {
 story="\n\
        _\n\
-   .&bull;'   '&bull;.    \"It seems that I have ever seen       O\n\
+   .&bull;'   '&bull;.    \"It seems that I have seen            O\n\
   /         \\    that guy before, hmmmm....\"         /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
@@ -1734,7 +1734,7 @@ PS: He heals 5 HP each time he attacks you, and he also has armor!";
 function openthechestfromsomeone() {
 	if(cheststep==0) {
 		closemessage();
-		makealert("chest-locked","Locked","The chest is locked, you need a key to open it<br><br><input type='button' onclick='openthechest()' value='Open the chest'>",true);
+		makealert("chest-locked","Locked","The chest is locked, you need a key to open it!<br><br><input type='button' onclick='openthechest()' value='Open the chest'>",true);
 	}
 	else if(cheststep==1) {
 		closemessage();
@@ -1796,7 +1796,7 @@ function openthechest() {
 		}
 		else if($("#chest-password-form").val()=="Ring-ding-ding-ding-dingeringeding!") {
 			cheststep++;
-			alert('Password is true. Access Granted');
+			alert('Correct password! Access granted!');
 			closemessage();
 		}
 		else {
@@ -1806,7 +1806,7 @@ function openthechest() {
 }
 
 function localstoragehelp() {
-	alert('Basicly it\'s a feature that allows the game to save your progress in your browser');
+	alert('Basically, it\'s a feature that allows the game to save progress in your browser.');
 }
 
 function save() {
@@ -2038,13 +2038,13 @@ function dosave(param) {
 		if(a) {
 			b=confirm("Are you sure?");
 			if(b) {
-				c=confirm("Ok, the last confirmation, are you sure? Remember, this can't be undone");
+				c=confirm("Last confirmation - are you really sure? Remember, this can't be undone!");
 				if(c) {
 
 					localStorage.clear();
 					checkthings();
 
-					alert('Localstorage cleared, please refresh the page for\nchanges to apply (don\'t save before refreshing!)');
+					alert('Local storage cleared, please refresh the page for\nchanges to apply (don\'t save before refreshing!)');
 
 				}
 			}
@@ -2167,7 +2167,7 @@ if(currentsword=="Iron Sword") { stype="Iron"; }
 if(currentsword=="Diamond Sword") { stype="Diamond"; }
 if(currentsword=="Emerald Sword") { stype="Diamond"; }
 
-output2=output2+"<img style=\"position:absolute;\" class=\"player-sword-"+id+"\" src=\"images/sword"+stype+".png\">";
+//output2=output2+"<img style=\"position:absolute;\" class=\"player-sword-"+id+"\" src=\"images/sword"+stype+".png\">";
 
 output2=output2+"<pre style=\"position:absolute;margin-top:-180px;margin-left:50px;opacity:0;\" class=\"thunder-"+id+"\">\n\
                          ___\n\
@@ -2211,16 +2211,16 @@ else {
 }
 
 if(name=="Thief") {
-	output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordWood.png\">";
+	//output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordWood.png\">";
 }
 else if(name=="Castle Guard") {
-	output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordGold.png\">";
+	//output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordGold.png\">";
 }
 else if(name=="Castle Staff") {
-	output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordIron.png\">";
+	//output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordIron.png\">";
 }
 else if(name=="Zombie King") {
-	output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordDiamond.png\">";
+	//output2=output2+"<img style=\"position:absolute;\" class=\"enemy-sword-"+id+"\" src=\"images/swordDiamond.png\">";
 }
 
 
@@ -2765,7 +2765,7 @@ scroll='\n\
 		$(".buttons-"+id).hide();
 		$(".enemy-"+id+"-hp").html('1');
 		setTimeout(function(){
-			makealert("boss-win","Almost!","<div style='max-height:300px; overflow-y:auto;'>You (almost) killed the guy<br>but he successfully recover 1 hp before dying<br><br><br><br><br><br>But....<br><br><br><br>You have learned something.......<br><br><br><br><br><br><br><br>You can't solve a problem by doing a revenge......<br><br><br><br><br><br><br><br>The best way is to talk to the guy himself and forgive him......<br><br><br><br><br><br><br><br>Since killing won't solve the problem......<br><br><br><br><br><br><br><br>You have talked to him and forgive him<br><br><br><br>Everything is normal now<br><br><br><br>And now he wants you to teleport back to the real world.............<br><br><br><br>But, you finally choose to live in this 'weird' world<br><br><br><br>You have done so many things in this world<br><br><br><br>and you learned to love this world<br><br><br><br>and you don't even want to go back<br><br><br><br><br><br><br><br>Oh, btw he has a chest for you<br><br><br><br><input type='button' onclick='openthechestfromsomeone()' value='Open the chest'><br><br></div>",true);
+			makealert("boss-win","Almost!","<div style='max-height:300px; overflow-y:auto;'>Just when you thought it was all over...<br>...the guy managed to heal himself and surrendered.<br><br><br><br><br><br>But...<br><br><br><br>You have learned something...<br><br><br><br><br><br><br><br>You can't solve your problems with revenge...<br><br><br><br><br><br><br><br>You have to acknowledge them and talk to others.<br><br><br><br><br><br><br><br>Since killing won't solve the problem...<br><br><br><br><br><br><br><br>You have talked to him and forgave him.<br><br><br><br>Everything is normal now.<br><br><br><br>He wants you to teleport back to the real world...<br><br><br><br>But, you choose to stay in this 'weird' world.<br><br><br><br>You have done so many things here...<br><br><br><br>So, you learned to love this world.<br><br><br><br>You don't even think about going back anymore.<br><br><br><br><br><br><br><br>Oh, by the way, he has a chest for you! I wonder what's inside :o<br><br><br><br><input type='button' onclick='openthechestfromsomeone()' value='Open the chest'><br><br></div>",true);
 			$(".button-close-window-boss-win").hide();
 		},2000);
 	}
@@ -2932,6 +2932,9 @@ function putitem() {
 		updateitemlist();
 	}
 }
+
+// Just some random comment's brother :)
+
 function mixitems() {
 	cldr=thecauldron("return",0,0);
 	if(cldr[0]!=null && cldr[1]!=null && cldr[0].id==7 && cldr[0].quantity % 1 == 0 && cldr[1].id=="goldbar" && cldr[1].quantity % 100 == 0) {
