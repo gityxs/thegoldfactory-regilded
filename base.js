@@ -1055,7 +1055,7 @@ function dighole() {
 function continuedigging() {
 	powerhp();
 	battle=makebattle(Math.round(Math.random()*100),"Worms",80,80,"Their body",15,"Worms!",1,power,hp,hp,currentsword,false,"vs-worms");
-	html="<div class=\"alert alert-battle2\"><b>Worms! :o</b><br>There are worms under the ground!<br>They seemed to be mad because you destroyed their home.<br><br>"+battle.html+"</div>";
+	html="<div class=\"alert alert-battle2\"><b>Worms! :o</b><br>There are worms under the ground!<br>They seem to be mad because you destroyed their home...<br><br>"+battle.html+"</div>";
 	$("#otheralerts").append(html);
 	battle.init();
 	closemessage();
