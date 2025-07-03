@@ -339,9 +339,9 @@ function checkitem() {
 	if(goldbar < calculateTotalPrice(ironmining, 100, irondivisor)) { $(".buy-100-mining").attr("disabled",true); } else { $(".buy-100-mining").removeAttr("disabled"); }
 	if(goldbar < (skilllvl+1)) { $(".upgrade-price").attr("disabled",true); } else { $(".upgrade-price").removeAttr("disabled"); }
 	if(goldbar < 2500) { $(".buy-factory-button").attr("disabled",true); } else { $(".buy-factory-button").removeAttr("disabled"); }
-	if(ironbar < goldprice) { $(".buy-1-mining-gold").attr("disabled",true); } else { $(".buy-1-mining").removeAttr("disabled"); }
-	if(ironbar < calculateTotalPrice(goldmining, 10, golddivisor)) { $(".buy-10-mining-gold").attr("disabled",true); } else { $(".buy-10-mining").removeAttr("disabled"); }
-	if(ironbar < calculateTotalPrice(goldmining, 100, golddivisor)) { $(".buy-100-mining-gold").attr("disabled",true); } else { $(".buy-100-mining").removeAttr("disabled"); }
+	if(ironbar < goldprice) { $(".buy-1-mining-gold").attr("disabled",true); } else { $(".buy-1-mining-gold").removeAttr("disabled"); }
+	if(ironbar < calculateTotalPrice(goldmining, 10, golddivisor)) { $(".buy-10-mining-gold").attr("disabled",true); } else { $(".buy-10-mining-gold").removeAttr("disabled"); }
+	if(ironbar < calculateTotalPrice(goldmining, 100, golddivisor)) { $(".buy-100-mining-gold").attr("disabled",true); } else { $(".buy-100-mining-gold").removeAttr("disabled"); }
 }
 function buy(item,number) {
 	for(i=0;i<items.length;i++) {
@@ -631,7 +631,8 @@ $(document).ready(function() {
 		if(passworms) {
 			closemessage();
 			irontime=second2name(ibtime);
-			makealert("mining","Iron Mine","This iron mine allows you to get iron bars automatically!<br><br>You currently have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machines.<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 1 mining machine\" onclick=\"buyminingmachine(1)\" class=\"buy-1-mining\"> (<span class=\"1-iron-cost\">"+ironprice+"</span> Gold Bars)<br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+calculateTotalPrice(ironmining, 10, irondivisor)+"</span> Gold Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+calculateTotalPrice(ironmining, 100, irondivisor)+"</span> Gold Bars)<br><br>Don't worry, the price is the same no matter how many machines you buy!",true)
+			makealert("mining","Iron Mine","This iron mine allows you to get iron bars automatically!<br><br>You currently have <span class=\"iron-mining-amount\">"+ironmining+"</span> mining machines.<br>Production: <span class=\"ibpt\">"+ibpt+"</span> iron bar(s) / <span class=\"irontime\">"+irontime+"</span><br><br><input type=\"button\" value=\"Buy 1 mining machine\" onclick=\"buyminingmachine(1)\" class=\"buy-1-mining\"> (<span class=\"1-iron-cost\">"+ironprice+"</span> Gold Bars)<br><input type=\"button\" value=\"Buy 10 mining machines\" onclick=\"buyminingmachine(10)\" class=\"buy-10-mining\"> (<span class=\"10-iron-cost\">"+calculateTotalPrice(ironmining, 10, irondivisor)+"</span> Gold Bars)<br><input type=\"button\" value=\"Buy 100 mining machines\" onclick=\"buyminingmachine(100)\" class=\"buy-100-mining\"> (<span class=\"100-iron-cost\">"+calculateTotalPrice(ironmining, 100, irondivisor)+"</span> Gold Bars)<br><br>Don't worry, the price is the same no matter how many machines you buy!",true);
+			checkitem();
 		}
 	});
 	$(".gate").click(function() {
