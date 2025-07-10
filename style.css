@@ -589,7 +589,7 @@ pre.building {
 	float:left;
 	margin-left:20px;
 	cursor:pointer;
-	background:white;
+	user-select: none;
 }
 body.wob pre.building {
 	background:black;
@@ -620,8 +620,13 @@ pre.hill {
 }
 pre.chest {
 	position:absolute;
-	left:750px;
-	top:75px;
+	left:757.5px;
+	top:80px;
+}
+pre.phone {
+	position:absolute;
+	left:857.5px;
+	top:105px;
 }
 pre.castle {
 	position:absolute;
@@ -729,6 +734,7 @@ body.wob input[type=button]:hover {
 }
 .cloud {
 	position:absolute;
+	user-select: none;
 }
 .cloud-1 {
 	top:-175px;
@@ -745,7 +751,7 @@ body.wob input[type=button]:hover {
 	width:200px;
 }
 .cloud-4 {
-	top:-600px;
+	top:-400px;
 	left:1250px;
 	width:225px;
 	cursor:pointer;
@@ -790,6 +796,11 @@ pre.dig-step-2 {
 }
 pre.underworld-building {
 	cursor:pointer;
+	user-select:none;
+}
+.unselectable
+{
+	user-select:none;
 }
 pre.training-center {
 	position:absolute;
@@ -883,9 +894,14 @@ body.wob #credits {
 .castle-steps {
 	text-align:center;
 }
-.bugs {
+.reddit {
 	font-weight:bold;
 	color:red;
+	text-decoration:none;
+}
+.discord {
+	font-weight:bold;
+	color:#5865F2;
 	text-decoration:none;
 }
 .dec2021msg {
@@ -973,6 +989,9 @@ body.wob pre [type=button] {
 	z-index:10000;
 }
 .sand.hidden, .hole.hidden {
+	display:none;
+}
+.travel.hidden {
 	display:none;
 }
 body.wob .theportal, body.wob .thefox, body.wob .thehouse, body.wob .sand, body.wob .hole {

@@ -29,7 +29,8 @@
 		<a href="javascript:showstorage();">View inventory</a>
 	</div>
 	You have eaten <span class="pizzacount">0 pizzas</span>.<br>
-	Current weapon: <span class="currentsword">none</span>.
+	Current weapon: <span class="currentsword">none</span>.<br>
+  <span class="travel hidden"><hr><a href="javascript:travel();">Fast Travel</a></span>
 </div>
 
 <div class="modal"></div>
@@ -57,7 +58,7 @@ What do you want to buy, fellow adventurer?<br><br>
 <input type="button" value="A shovel" onclick="buy('shovel',1)" class="buy-shovel" disabled> (50 gold bars)<br>
 <input type="button" value="Pizza" onclick="buy('pizza',1)" class="buy-pizza" disabled> (20 gold bars)<br>
 <input type="button" value="20 Pizzas" onclick="buy('pizza',20)" class="buy-pizza-20" disabled> (400 gold bars)<br>
-<span class="wooden-sword-shop"><input type="button" value="Wooden sword" onclick="buy('wooden sword',1)" class="buy-wooden-sword" disabled> (150 gold bars)</span>
+<span class="wooden-sword-shop"><input type="button" value="Wooden sword" onclick="buy('wooden sword',1)" class="buy-wooden-sword" disabled> (50 gold bars)</span>
 <span class="stone-sword-shop" style="display:none;"><input type="button" value="Stone sword" onclick="buy('stone sword',1)" class="buy-stone-sword" disabled> (500 gold bars)</span>
 <span class="no-sword-upgrade" style="display:none;">Sorry, the stone sword is the best sword I have.</span>
 <br><br>
@@ -70,7 +71,7 @@ Hi! Welcome to my shop! :D<br><br>
 <input type="button" value="10 Iron Bars" onclick="goldbar-=100; ironbar+=10; checkthings();" class="buy-iron-bar" disabled> (100 gold bars)<br>
 <input type="button" value="100 Pizzas" onclick="buy('pizza',100)" class="buy-pizza-20" disabled> (2000 gold bars)<br>
 <input type="button" value="Health Potion" onclick="buy('health potion',1)" class="buy-health-potion"> (50 gold bars)<br>
-<span class="iron-sword-shop"><input type="button" value="Iron sword" onclick="buy('iron sword',1)" class="buy-iron-sword" disabled> (1000 gold bars, and please make sure you have a stone sword)</span>
+<span class="iron-sword-shop"><input type="button" value="Iron sword" onclick="buy('iron sword',1)" class="buy-iron-sword" disabled> (1000 gold bars, and please make sure you have a stone sword.)</span>
 <span class="diamond-sword-shop" style="display:none;"><input type="button" value="Diamond sword" onclick="buy('diamond sword',1)" class="buy-diamond-sword" disabled> (3000 gold bars)</span>
 <span class="need-iron" style="display:none;">Sorry, I have no more swords :(</span>
 <br><br>
@@ -79,7 +80,8 @@ Hi! Welcome to my shop! :D<br><br>
 
 <div class="alert alert-sign">
 <b>A sign</b><br>
-<i>"There is a hole here!"</i><br><br>
+<i>"There is a hole here!"</i><br>
+Not sure why you needed the sign to tell you that, but it must be important.<br><br>
 <input type="button" value="Dig the hole" onclick="dighole()">
 <input type="button" value="Close this window" onclick="closemessage()">
 </div>
@@ -113,7 +115,7 @@ This is an "unfinished" hole.<br><br>
   (  _ )_
 (_  _(_ ,)
 </pre>
-<pre class="cloud cloud-4 hidden" title="Castle in the cloud">
+<pre class="cloud cloud-4 hidden" title="Castle in the clouds">
         p
        /\     p      p
       /__\   /\_____/\
@@ -140,7 +142,7 @@ This is an "unfinished" hole.<br><br>
   ;. :  ;    ###:__.
 _.'__`._;_______:__:
 </pre>
-<pre class="building hidden  theshop" title="The Shop">
+<pre class="building theshop" title="The Shop">
 
 
 
@@ -244,6 +246,13 @@ _||_
  _
 |_|
 </pre>
+<pre class="building hidden phone" title="Phone">
+*
+|_
+(O)
+|#|
+'-'
+</pre>
 <pre class="building hidden castle" title="Castle of Zombies">
      p                  p         p
     /\     p      p    /\        /\
@@ -295,15 +304,15 @@ ___|__|___|_|___|_|_____________|__|__
  `,_/________.-----,_____,.-`
       o'     `-==='   `o,
 </pre>
-<pre class="none">a</pre>
-<div class="road">_</div>
+<pre class="none unselectable">a</pre>
+<div class="road unselectable">_</div>
 </div>
 <div id="underground">
-<pre class="dig-step-1 hidden " title="A hole">
+<pre class="dig-step-1 hidden unselectable" title="A hole">
 |       |
 |_______|
 </pre>
-<pre class="dig-step-2 hidden ">
+<pre class="dig-step-2 hidden unselectable">
                                 |       |
      __________                /         \____
     /          \______________/               \___________
@@ -334,7 +343,8 @@ ___|__|___|_|___|_|_____________|__|__
 
 
 </pre>
-<pre class="underworld-building training-center hidden " title="Training Center">
+<pre class="underworld-building training-center hidden" title="Training Center">
+
   _____________
  /             \
 /_______________\
@@ -344,7 +354,7 @@ ___|__|___|_|___|_|_____________|__|__
 |          | |  |
 |__________|_|__|
 </pre>
-<pre class="underworld-building mining hidden " title="Iron Mine">
+<pre class="underworld-building mining hidden" title="Iron Mine">
 |                      |
 |                      |
 |                      |
@@ -356,70 +366,71 @@ ___|__|___|_|___|_|_____________|__|__
   \%#@$#%$#@$%#%#$&#%/
 </pre>
 <pre class="underworld-building small-hole hidden" title="A small hole">
- \
-  |
-  |
-  |
-  |
- /
+ \.
+  |.
+  |;
+  |.
+  |:
+ /;
 </pre>
-<pre class="digging hidden">
+<pre class="digging hidden unselectable">
 \_____________________________________
 
 
 
 
-               <span class="click nametag" title="A name tag">_____</span>
-______________<span class="click nametag" title="A name tag">[_____]</span>_________________
+               <span class="click nametag unselectable" title="A name tag">_____</span>
+______________<span class="click nametag unselectable" title="A name tag">[_____]</span>_________________
 </pre>
-<pre class="dig-get-chest hidden">
+<pre class="dig-get-chest hidden unselectable">
 ______________________________________
 
 
 
 
-             <span class="click chest-dig" title="A chest">_</span>
-____________<span class="click chest-dig" title="A chest">|_|</span>_______________________
+             <span class="click chest-dig unselectable" title="A chest">_</span>
+____________<span class="click chest-dig unselectable" title="A chest">|_|</span>_______________________
 </pre>
-<pre class="dig-pizzas hidden">
+<pre class="dig-pizzas hidden unselectable">
+______________________________________
+
+
+<span class="click pizzas unselectable" title="Old pizza ovens">
+            _[_    _[_    _[_
+           /$%#\  /$#%\  /#%$\
+___________[-=-];;[-=-];;[-=-]________
+</span>
+</pre>
+<pre class="dig-laptop hidden unselectable">
 ______________________________________
 
 
 
 
 
-_______________<span class="click pizzas" title="Badly 'drawn' pizzas">---_-_--_---_-</span>_________
+_____________________<span class="click laptop unselectable" title="A laptop">_/</span>_______________
 </pre>
-<pre class="dig-laptop hidden">
+<pre class="dig-sign hidden unselectable">
 ______________________________________
 
-
-
-
-
-_____________________<span class="click laptop" title="A laptop">_/</span>_______________
-</pre>
-<pre class="dig-sign hidden">
-______________________________________
-
-                          <span class="click sign-dig" title="A sign">__</span>
-                         <span class="click sign-dig" title="A sign">[__]</span>
-             <span class="click old-machine" title="An old machine">______</span>
-            <span class="click old-machine" title="An old machine">|      |</span>
-____________<span class="click old-machine" title="An old machine">|______|</span>__________________
+                          <span class="click sign-dig unselectable" title="A sign">__</span>
+                         <span class="click sign-dig unselectable" title="A sign">[__]</span>
+             <span class="click old-machine unselectable" title="An old machine">______</span>
+            <span class="click old-machine unselectable" title="An old machine">|      |</span>
+____________<span class="click old-machine unselectable" title="An old machine">|______|</span>__________________
 </pre>
 </div>
 </div>
 
 <div id="version"><img src="icon.png">&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:changelog();" class="leversion"></a> - TGF: Regilded by voxelbugged - <a href="https://gamehelp16.github.io/thegoldfactory/">Original game</a> by gamehelp16</div>
 <div id="credits">
-<a href="javascript:showdec2021msg();" class="dec2021msg">gamehelp16's Dec 2021 Message</a> - <a href="javascript:showbugs();" class="bugs">Bugs</a> - <a href="https://www.reddit.com/r/TGFRegilded/" target="_blank">Subreddit</a> - <a href="javascript:showcredits();">Credits</a> - <a href="javascript:save();">Save</a> - <a href="javascript:toggle();">Toggle Color</a>
+<a href="javascript:showdec2021msg();" class="dec2021msg">gamehelp16's Dec 2021 Message</a> - <a href="https://discord.gg/nMEEVWtwXS" target="_blank" class="discord">Discord</a> - <a href="https://www.reddit.com/r/TGFRegilded/" target="_blank" class="reddit">Subreddit</a> - <a href="javascript:showcredits();">Credits</a> - <a href="javascript:save();">Save Options</a> - <a href="javascript:toggle();">Toggle Color</a>
 </div>
 
 <div id="realworld">
 <div id="sky">
 <br><br><br><br><br><br><br><br><br><br>
-<pre class="theportal" title="Portal">
+<pre class="building theportal" title="Portal">
 
 
 
@@ -430,7 +441,7 @@ ____________<span class="click old-machine" title="An old machine">|______|</spa
 []    []
 [][][][]
 </pre>
-<pre class="thefox" title="The Fox">
+<pre class="building thefox" title="The Fox">
 
 
 
@@ -439,7 +450,7 @@ ____________<span class="click old-machine" title="An old machine">|______|</spa
 \`.,'/      ; ;
 /_  _\`-----';
   \/` ,,,,,, ;
-____)//_____\))_
+    )//     \))
 </pre>
 <!--pre class="building thefox" title="The Fox">
 
@@ -452,7 +463,7 @@ ____)//_____\))_
       `-.__   _,-.   )       _,.-'
 ___________`"_____G..m-"^m`m'_______
 </pre-->
-<pre class="thehouse" title="A House">
+<pre class="building thehouse" title="A House">
 
   __________
  /          \
@@ -463,7 +474,7 @@ ___________`"_____G..m-"^m`m'_______
 |       | |  |
 |_______|_|__|
 </pre>
-<pre class="sand hidden" title="Sand">
+<pre class="building sand" title="Sand">
 
 
 
@@ -474,7 +485,7 @@ ___________`"_____G..m-"^m`m'_______
     $*^!&*()@!(@*$$!&(%!%*$%!#^#!@$)(&%((%&#@)^%$%$%!^*#@&*%##&@^)#%@(@$(%)&#)!#!%^$()*###%#!^%*@#^
 ^#$@@)^&^&(%@%$@%)#$@@!$(&%(&&$*%#*!$&)*)#)(@&#)#$$#(*%!^&@@%%*#^$))#$&(&@$!#($#))^^!^^(*%(%$@%&&*!**
 </pre>
-<pre class="hole hidden" title="Hole">
+<pre class="hole hidden unselectable" title="Hole">
 
 @#            $
 (^(          $%
@@ -505,10 +516,10 @@ ___________`"_____G..m-"^m`m'_______
 |             |
 |             |
 |             |
-|        <span class="click boss" title="Someone"> O </span>  |
-|        <span class="click boss" title="Someone">/|\</span>  |
-|        <span class="click boss" title="Someone"> | </span>  |
-|________<span class="click boss" title="Someone">/_\</span>__|
+|        <span class="click boss building" title="Someone"> O </span>  |
+|        <span class="click boss building" title="Someone">/|\</span>  |
+|        <span class="click boss building" title="Someone"> | </span>  |
+|________<span class="click boss building" title="Someone">/_\</span>__|
 
 
 
@@ -518,7 +529,7 @@ ___________`"_____G..m-"^m`m'_______
 
 </pre>
 <br><br><br><br><br><br><br><div style="height:30px;"></div>
-<div class="road">_</div>
+<div class="road unselectable">_</div>
 </div>
 </div>
 
