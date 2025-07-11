@@ -2922,7 +2922,10 @@ scroll='\n\
 			makealert("win-vs-rat","Goodbye, Rat!","You killed the rat, and you found it hoarding "+reward+" gold bars!<br><br><input type='button' value=\"Kill more rats!\" onclick='battlevsrats()'>",true);
 		}
 	}
-
+	else if(param=="vs-shark"){
+		closemessage();
+		checkthings();
+	}
 	if(param!="vs-rat" && param!="training"){
 		reward=enemyhealthpoint2(false,0);
 		goldbar+=reward;
