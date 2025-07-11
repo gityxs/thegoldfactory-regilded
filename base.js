@@ -44,14 +44,14 @@ function updategold() {
 		}
 		ibtime=60;
 	}
-	else if(ironmining>199 && ironmining<4717) {
-		ibpt=Math.round((ironmining-219)/4.5);
+	else if(ironmining>199 && ironmining<4697) {
+		ibpt=Math.round((ironmining-199)/4.5);
 		if(ibpt==0) {
 			ibpt=1;
 		}
 		ibtime=1;
 	}
-	else if(ironmining>=4717) {
+	else if(ironmining>=4697) {
 		ibpt=1000;
 		ibtime=1;
 	}
