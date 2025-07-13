@@ -24,6 +24,7 @@ var instasused = 0;
 var battleid = 1;
 var winningbattle = false;
 var pizzacollected;
+var changecredits = true;
 
 function randomnumber(min,max) {
 	return Math.floor(Math.random()*(max-min)+min);
@@ -2139,12 +2140,15 @@ function dosave(param) {
 
 		localStorage.thegoldfactorygamesave=btoa(goldbar+"|"+ironbar+"|"+gbps+"|"+goldmining+"|"+ibpt+"|"+ibtime+"|"+ironmining+"|"+items[0].owned+"|"+items[1].owned+"|"+items[2].owned+"|"+items[3].owned+"|"+items[4].owned+"|"+items[5].owned+"|"+items[6].owned+"|"+items[7].owned+"|"+items[8].owned+"|"+items[9].owned+"|"+items[10].owned+"|"+items[11].owned+"|"+items[12].owned+"|"+items[13].owned+"|"+items[14].owned+"|"+items[15].owned+"|"+items[16].owned+"|"+items[17].owned+"|"+items[18].owned+"|"+items[19].owned+"|"+items[20].owned+"|"+items[21].owned+"|"+items[22].owned+"|"+items[23].owned+"|"+items[24].owned+"|"+enchant_attack+"|"+enchant_defense+"|"+enchant_countdown+"|"+enchant_life+"|"+helmet+"|"+chestplate+"|"+pants+"|"+boots+"|"+theusername+"|"+theuserdesc+"|"+cheststep+"|"+searchtimes+"|"+shovelbroken+"|"+cursor+"|"+pizzaeaten+"|"+poisoned+"|"+chestunderground+"|"+talk+"|"+wob+"|"+buyfactory+"|"+skill+"|"+skilllvl+"|"+additionalattack+"|"+clickcloudcount+"|"+openchestcount+"|"+candybox+"|"+hpactive+"|"+airplanecountdown+"|"+digcountdown+"|"+digstep+"|"+currentsword+"|"+passthief+"|"+passworms+"|"+passgate+"|"+unlockenchant+"|"+unlockchest+"|"+beatboss+"|"+hasairplane+"|"+reachedclouds+"|"+defeatinvisiblebot+"|"+gethole+"|"+win+"|"+hasportal+"|"+cipherstep+"|"+activatemachine+"|"+autosave+"|"+autoattack+"|"+pizzacollected)+"encrypted";
 
-		justarandomvariablename=$('#credits').html();
-		$('#credits').html("(Game saved)&nbsp;"+justarandomvariablename);
-		setTimeout(function() {
-			$('#credits').html(justarandomvariablename);
-		},5000);
-
+		if(changecredits) {
+			justarandomvariablename=$('#credits').html();
+			$('#credits').html("(Game saved!)&nbsp;"+justarandomvariablename);
+			changecredits = false;
+			setTimeout(function() {
+				$('#credits').html(justarandomvariablename);
+				changecredits = true;
+			},5000);
+		}
 	}
 	else if(param=="reset") {
 		a=confirm("Are you sure you want to reset your game?");
