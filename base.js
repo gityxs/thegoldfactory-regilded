@@ -1361,16 +1361,16 @@ function armorshop() {
 }
 function buyarmor(armor) {
 	if(armor=="helmet") {
-		price=(helmet*helmet)*1000+1000;
+		price=(helmet)*2000+1000;
 	}
 	else if(armor=="chestplate") {
-		price=(chestplate*chestplate)*1000+1000;
+		price=(chestplate)*2000+1000;
 	}
 	else if(armor=="pants") {
-		price=(pants*pants)*1000+1000;
+		price=(pants)*2000+1000;
 	}
 	else if(armor=="boots") {
-		price=(boots*boots)*1000+1000;
+		price=(boots)*2000+1000;
 	}
 
 	if(goldbar>=price) {
