@@ -2576,7 +2576,7 @@ function attackdelay(id,sec) {
 	}
 	else {
 		$(".button-attack-"+id).removeAttr("disabled");
-		$(".button-attack-"+id).attr("value","Attack!");
+		$(".button-attack-"+id).attr("value","攻击!");
 		if(autoattack && id == battleid){
 			$(".button-attack-"+id).click();
 		}
@@ -2749,26 +2749,26 @@ function potiondelay(id,sec) {
 function skilldelay(id,sec) {
 	if(sec!=0) {
 		$(".button-skill-"+id).attr("disabled",true);
-		$(".button-skill-"+id).attr("value","Use skill ("+sec+")");
+		$(".button-skill-"+id).attr("value","使用技能 ("+sec+")");
 		sec--;
 		skilltimeout=setTimeout(function(){skilldelay(id,sec);},1000);
 	}
 	else {
 		$(".button-skill-"+id).removeAttr("disabled");
-		$(".button-skill-"+id).attr("value","Use skill");
+		$(".button-skill-"+id).attr("value","使用技能");
 		skilltimeout = undefined;
 	}
 }
 function healthdelay(id,sec) {
 	if(sec!=0) {
 		$(".button-health-"+id).attr("disabled",true);
-		$(".button-health-"+id).attr("value","["+items[7].owned+"] Health Potion ("+sec+")");
+		$(".button-health-"+id).attr("value","["+items[7].owned+"] 生命药水 ("+sec+")");
 		sec--;
 		healthtimeout=setTimeout(function(){healthdelay(id,sec);},1000);
 	}
 	else {
 		$(".button-health-"+id).removeAttr("disabled");
-		$(".button-health-"+id).attr("value","["+items[7].owned+"] Health Potion");
+		$(".button-health-"+id).attr("value","["+items[7].owned+"] 生命药水");
 		healthtimeout = undefined;
 	}
 }
