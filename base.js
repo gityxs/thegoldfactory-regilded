@@ -383,7 +383,7 @@ function buy(item,number) {
 						$(".diamond-sword-shop").show();
 					}
 					else {
-						alert('Hey, I need something to defend myself with too! A stone sword would be just fine.');
+						alert('嘿，我也需要一些东西来保护自己！一把石剑就可以了.');
 						valid=false;
 					}
 				}
@@ -598,7 +598,7 @@ $(document).ready(function() {
 		}
 		else {
 			closemessage();
-			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>You currently have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"购买 1 采矿机器\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold bigbutton\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 10 采矿机器\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold bigbutton\"> (<span class=\"10-gold-cost\">"+calculateTotalPrice(goldmining, 10, golddivisor)+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 100 采矿机器\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold bigbutton\"> (<span class=\"100-gold-cost\">"+calculateTotalPrice(goldmining, 100, golddivisor)+"</span> Iron Bars)<br><br>Don't worry, the price's the same no matter how many you buy at once!<br>You can also <input type='button' value='kill rats' onclick='killrats()'>or <input type='button' value='decipher codes' onclick='ciphercode()'>.",true);
+			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>You currently have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"购买 1 采矿机器\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold bigbutton\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 10 采矿机器\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold bigbutton\"> (<span class=\"10-gold-cost\">"+calculateTotalPrice(goldmining, 10, golddivisor)+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 100 采矿机器\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold bigbutton\"> (<span class=\"100-gold-cost\">"+calculateTotalPrice(goldmining, 100, golddivisor)+"</span> Iron Bars)<br><br>Don't worry, the price's the same no matter how many you buy at once!<br>You can also <input type='button' value='击杀老鼠' onclick='killrats()'>or <input type='button' value='破译密码' onclick='ciphercode()'>.",true);
 			checkitem();
 		}
 	});
@@ -849,12 +849,12 @@ chestascii='\n\
 	$(".pizzas").click(function() {
 		if(!pizzaeaten) {
 			if(!pizzacollected) {
-				makealert("pizza-alert","Pizza!","You found some old pizza ovens!<br>They seem like they could be useful, but unfortunately, they are broken.<br>You need 5,000 gold bars and 2,500 iron bars to repair them.<br><br><input type='button' value='Fix the ovens' class='smallbutton' onclick='eatpizza()'><br><br>The ovens also had 50 leftover pizzas in them!",true);
+				makealert("pizza-alert","Pizza!","You found some old pizza ovens!<br>They seem like they could be useful, but unfortunately, they are broken.<br>You need 5,000 gold bars and 2,500 iron bars to repair them.<br><br><input type='button' value='修理烤箱' class='smallbutton' onclick='eatpizza()'><br><br>The ovens also had 50 leftover pizzas in them!",true);
 				pizzacollected = true;
 				items[3].owned += 50;
 			}
 			else {
-				makealert("pizza-alert","Pizza!","You found some old pizza ovens!<br>They seem like they could be useful, but unfortunately, they are broken.<br>You need 5,000 gold bars and 2,500 iron bars to repair them.<br><br><input type='button' value='Fix the ovens' class='smallbutton' onclick='eatpizza()'>",true);
+				makealert("pizza-alert","Pizza!","You found some old pizza ovens!<br>They seem like they could be useful, but unfortunately, they are broken.<br>You need 5,000 gold bars and 2,500 iron bars to repair them.<br><br><input type='button' value='修理烤箱' class='smallbutton' onclick='eatpizza()'>",true);
 			}
 		}
 		else if(pizzaeaten) {
@@ -862,7 +862,7 @@ chestascii='\n\
 		}
 	});
 	$(".laptop").click(function() {
-		makealert("cookieclicker","Cookie Clicker Lite™","Play the full game here: <a href='http://orteil.dashnet.org/cookieclicker/' target='_blank'>http://orteil.dashnet.org/cookieclicker/</a><br><br><span style='font-size:20px;'><span class='current-cookie'>"+items[19].owned+"</span> cookie(s)</span><br><span class='cps'>"+cursor/10+" </span> per second<br><br><input type=\"button\" value=\"烤饼干\" class='smallbutton' onclick=\"cookieclicker('bake')\"><br><br><span style='font-size:20px;'>Shop:</span><br><br><input type=\"button\" value=\"诅咒 ["+cursor+"]\" onclick=\"alert('This is not the full version of Cookie Clicker, so you cannot buy cursors!')\" class='cursor-button smallbutton'> (<span class='cursor-price'>"+Math.round(15*Math.pow(1.15,cursor))+"</span> cookies)<br><!--input type=\"button\" value=\"奶奶 [0]\" class='smallbutton' onclick=\"alert('This is not the full version of Cookie Clicker!')\"> (100 cookies)00-->",true);
+		makealert("cookieclicker","Cookie Clicker Lite™","Play the full game here: <a href='http://orteil.dashnet.org/cookieclicker/' target='_blank'>http://orteil.dashnet.org/cookieclicker/</a><br><br><span style='font-size:20px;'><span class='current-cookie'>"+items[19].owned+"</span> cookie(s)</span><br><span class='cps'>"+cursor/10+" </span> per second<br><br><input type=\"button\" value=\"烤饼干\" class='smallbutton' onclick=\"cookieclicker('bake')\"><br><br><span style='font-size:20px;'>Shop:</span><br><br><input type=\"button\" value=\"诅咒 ["+cursor+"]\" onclick=\"alert('这不是Cookie Clicker的完整版本，所以你不能购买光标!')\" class='cursor-button smallbutton'> (<span class='cursor-price'>"+Math.round(15*Math.pow(1.15,cursor))+"</span> cookies)<br><!--input type=\"button\" value=\"奶奶 [0]\" class='smallbutton' onclick=\"alert('这不是Cookie Clicker的完整版本!')\"> (100 cookies)00-->",true);
 
 		/*
 
@@ -918,7 +918,7 @@ computer="                                            _________________\n\
 	});
 	$(".sand").click(function() {
 		if(items[24].owned==1) {
-			makealert("sand","Sand","There is a lot of sand here. You have no idea who put it here, if anyone did.<br><br><input type='button' value='Search for stuff!' class='bigbutton' onclick='searchsand()'> <span class='search-result'></span><br><input type='button' value='Bury yourself in the sand!' class='bigbutton' onclick='burysand()'>",true);
+			makealert("sand","Sand","There is a lot of sand here. You have no idea who put it here, if anyone did.<br><br><input type='button' value='搜索东西!' class='bigbutton' onclick='searchsand()'> <span class='search-result'></span><br><input type='button' value='把自己埋在沙子里!' class='bigbutton' onclick='burysand()'>",true);
 		}
 		else {
 			makealert("sand","Sand","There is a lot of sand here. You have no idea who put it here, if anyone did.<br>You can't see anything interesting inside the sand. Maybe if you had something to help you see better...",true);
@@ -933,7 +933,7 @@ story="\n\
   /         \\    Hmmmm... That's weird...\"           /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
-  \\         /    <input type='button' value='Next >' onclick='guy(1)'>                              \n\
+  \\         /    <input type='button' value='下一个 >' onclick='guy(1)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
     / | | \\\n\
@@ -943,15 +943,15 @@ story="\n\
 			makealert("boss-conversation","Someone","Someone is standing there...<br><br><pre class='boss-story'>"+story+"</pre>",true);
 		}
 		else {
-			makealert("chest-from-boss","Chest","There is a chest here.<br><br><input type='button' class='mediumbutton' onclick='openthechestfromsomeone()' value='Interact with the chest'>",true);
+			makealert("chest-from-boss","Chest","There is a chest here.<br><br><input type='button' class='mediumbutton' onclick='openthechestfromsomeone()' value='与宝箱互动'>",true);
 		}
 	});
 	$(".old-machine").click(function() {
 		if(activatemachine) {
-			makealert("old-machine","An Old Machine","The machine has a single slot and only one instruction: 'INSERT BARS'. You don't really know what it does, but hey, maybe it could be useful!<br><br><input type='button' value='Put 1,000 gold bars inside the machine' onclick='givemachinegoldbar(1000)' class='hugebutton'><br><input type='button' value='Put 10,000 gold bars inside the machine' onclick='givemachinegoldbar(10000)' class='hugebutton'><br><input type='button' value='Put 100,000 gold bars inside the machine' onclick='givemachinegoldbar(100000)' class='hugebutton'><br><br><input type='button' value='Put 1,000 iron bars inside the machine' onclick='givemachineironbar(1000)' class='hugebutton'><br><input type='button' value='Put 10,000 iron bars inside the machine' onclick='givemachineironbar(10000)' class='hugebutton'><br><input type='button' value='Put 100,000 iron bars inside the machine' onclick='givemachineironbar(100000)' class='hugebutton'>",true);
+			makealert("old-machine","An Old Machine","The machine has a single slot and only one instruction: 'INSERT BARS'. You don't really know what it does, but hey, maybe it could be useful!<br><br><input type='button' value='放入 1,000 金条到机器里' onclick='givemachinegoldbar(1000)' class='hugebutton'><br><input type='button' value='放入 10,000 金条到机器里' onclick='givemachinegoldbar(10000)' class='hugebutton'><br><input type='button' value='放入 10,000 金条到机器里' onclick='givemachinegoldbar(100000)' class='hugebutton'><br><br><input type='button' value='放入 1,000 铁条到机器里' onclick='givemachineironbar(1000)' class='hugebutton'><br><input type='button' value='放入 10,000 铁条到机器里' onclick='givemachineironbar(10000)' class='hugebutton'><br><input type='button' value='放入 100,000 铁条到机器里' onclick='givemachineironbar(100000)' class='hugebutton'>",true);
 		}
 		else {
-			makealert("old-machine","An Old Machine","This old machine seems to need fuel, maybe a good old bucket of lava could do the trick?<br><br><input type='button' value='Pour some lava in' class='mediumbutton' onclick='givelavabuckettothemachine()'>",true);
+			makealert("old-machine","An Old Machine","This old machine seems to need fuel, maybe a good old bucket of lava could do the trick?<br><br><input type='button' value='倒一些熔岩进去' class='mediumbutton' onclick='givelavabuckettothemachine()'>",true);
 		}
 	});
 
@@ -1007,10 +1007,10 @@ function givemachinegoldbar(howmany) {
 			howmany/=4;
 			ironbar+=howmany;
 			checkthings();
-			alert('The machine gave you '+howmany.toLocaleString("en")+' iron bar(s)!');
+			alert('机器给了你 '+howmany.toLocaleString("en")+' 铁条!');
 		}
 		else {
-			alert('Not enough gold bars!');
+			alert('金条不足!');
 		}
 	}
 }
@@ -1021,10 +1021,10 @@ function givemachineironbar(howmany) {
 			howmany/=4;
 			goldbar+=howmany;
 			checkthings();
-			alert('The machine gave you '+howmany.toLocaleString("en")+' gold bar(s)!');
+			alert('机器给了你 '+howmany.toLocaleString("en")+' 金条!');
 		}
 		else {
-			alert('Not enough iron bars!');
+			alert('铁条不足!');
 		}
 	}
 }
@@ -1036,7 +1036,7 @@ function givelavabuckettothemachine() {
 			makealert("lava-success","It works!","You have successfully powered the machine up!",true);
 		}
 		else {
-			alert('You have no lava!');
+			alert('你没有熔岩!');
 		}
 	}
 }
@@ -1082,7 +1082,7 @@ function showcredits() {
 }
 function showetc() {
 	closemessage();
-	makealert("etc","Etc.","<div style='max-height:300px; overflow-y:auto;'>I don't know what name is good for this part, so i just give the name \"etc\" :D<br><br>If there are some bugs, glitches, suggestions, etc., you can contact me via: <a href=\"http://reddit.com/r/thegoldfactory\" target='_blank'>reddit</a><br>If you like this game, feel free to share it<br>.. and don't forget to <a href='http://github.com/gamehelp16/thegoldfactory' target='_blank'>view the repo</a> on GitHub!<br><br><i>\"The awkward moment when you need gold to buy wooden sword and you can't make a butter sword by yourself\"</i><br><br>...and sorry if my English is bad XD<br><br><small><a href='javascript:alert(\"why was this even in the game\")' style='color:white;' title='Dont click me, pls'>headache mode</a></small></div>",true)
+	makealert("etc","Etc.","<div style='max-height:300px; overflow-y:auto;'>I don't know what name is good for this part, so i just give the name \"etc\" :D<br><br>If there are some bugs, glitches, suggestions, etc., you can contact me via: <a href=\"http://reddit.com/r/thegoldfactory\" target='_blank'>reddit</a><br>If you like this game, feel free to share it<br>.. and don't forget to <a href='http://github.com/gamehelp16/thegoldfactory' target='_blank'>view the repo</a> on GitHub!<br><br><i>\"The awkward moment when you need gold to buy wooden sword and you can't make a butter sword by yourself\"</i><br><br>...and sorry if my English is bad XD<br><br><small><a href='javascript:alert(\"为什么这个会出现在游戏中\")' style='color:white;' title='Dont click me, pls'>headache mode</a></small></div>",true)
 }
 function toggle() {
 	if(wob) {
@@ -1357,7 +1357,7 @@ function changelog() {
 }
 function armorshop() {
 	closemessage();
-	makealert("armor-shop","Armor Section","We sell armor too! Buy some to absorb damage from your enemies!<br><br>Your stats: <span class=\'absorb-percent'>0</span>% damage absorbed<br><br><div class='helmet-area'><input type=\"button\" value=\"Buy a leather helmet\" onclick=\"buyarmor('helmet')\" class=\"button-buy-helmet mediumbutton\"> (<span class=\"buy-helmet-price\">0</span> gold bars)</div><div class='chestplate-area'><input type=\"button\" value=\"Buy a leather chestplate\" onclick=\"buyarmor('chestplate')\" class=\"button-buy-chestplate mediumbutton\"> (<span class=\"buy-chestplate-price\">0</span> gold bars)</div><div class='pants-area'><input type=\"button\" value=\"Buy a leather pants\" onclick=\"buyarmor('pants')\" class=\"button-buy-pants mediumbutton\"> (<span class=\"buy-pants-price\">0</span> gold bars)</div><div class='boots-area'><input type=\"button\" value=\"Buy a leather boots\" onclick=\"buyarmor('boots')\" class=\"button-buy-boots mediumbutton\"> (<span class=\"buy-boots-price\">0</span> gold bars)</div>",true)
+	makealert("armor-shop","Armor Section","We sell armor too! Buy some to absorb damage from your enemies!<br><br>Your stats: <span class=\'absorb-percent'>0</span>% damage absorbed<br><br><div class='helmet-area'><input type=\"button\" value=\"购买一个皮盔\" onclick=\"buyarmor('helmet')\" class=\"button-buy-helmet mediumbutton\"> (<span class=\"buy-helmet-price\">0</span> gold bars)</div><div class='chestplate-area'><input type=\"button\" value=\"购买一个皮板甲\" onclick=\"buyarmor('chestplate')\" class=\"button-buy-chestplate mediumbutton\"> (<span class=\"buy-chestplate-price\">0</span> gold bars)</div><div class='pants-area'><input type=\"button\" value=\"购买一个皮裤\" onclick=\"buyarmor('pants')\" class=\"button-buy-pants mediumbutton\"> (<span class=\"buy-pants-price\">0</span> gold bars)</div><div class='boots-area'><input type=\"button\" value=\"购买一个皮靴\" onclick=\"buyarmor('boots')\" class=\"button-buy-boots mediumbutton\"> (<span class=\"buy-boots-price\">0</span> gold bars)</div>",true)
 	checkthings();
 }
 function buyarmor(armor) {
@@ -1623,7 +1623,7 @@ function computeraction(type) {
 			$(".ylvis-the-fox").show();
 		}
 		else {
-			alert('You have no disc to insert!');
+			alert('没有可插入的光盘!');
 		}
 	}
 	else if(type=="glasses") {
@@ -1666,7 +1666,7 @@ computer="                                            _________________\n\
 		}
 		else {
 			closemessage();
-			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>You currently have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"购买 1 采矿机器\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold bigbutton\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 10 采矿机器\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold bigbutton\"> (<span class=\"10-gold-cost\">"+calculateTotalPrice(goldmining, 10, golddivisor)+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 100 采矿机器\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold bigbutton\"> (<span class=\"100-gold-cost\">"+calculateTotalPrice(goldmining, 100, golddivisor)+"</span> Iron Bars)<br><br>Don't worry, the price's the same no matter how many you buy at once!<br>You can also <input type='button' value='kill rats' onclick='killrats()'>or <input type='button' value='decipher codes' onclick='ciphercode()'>.",true);
+			makealert("buy-factory-new","The Gold Factory","Status: You are the boss! :o<br><br>You currently have <span class=\"gold-mining\">"+goldmining+"</span> mining machines.<br>Production: <span class=\"gbps\">"+gbps+"</span> gold bars / second<br><br><input type=\"button\" value=\"购买 1 采矿机器\" onclick=\"buyminingmachinegold(1)\" class=\"buy-1-mining-gold bigbutton\"> (<span class=\"1-gold-cost\">"+goldprice+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 10 采矿机器\" onclick=\"buyminingmachinegold(10)\" class=\"buy-10-mining-gold bigbutton\"> (<span class=\"10-gold-cost\">"+calculateTotalPrice(goldmining, 10, golddivisor)+"</span> Iron Bars)<br><input type=\"button\" value=\"购买 100 采矿机器\" onclick=\"buyminingmachinegold(100)\" class=\"buy-100-mining-gold bigbutton\"> (<span class=\"100-gold-cost\">"+calculateTotalPrice(goldmining, 100, golddivisor)+"</span> Iron Bars)<br><br>Don't worry, the price's the same no matter how many you buy at once!<br>You can also <input type='button' value='击杀老鼠' onclick='killrats()'>or <input type='button' value='破译密码' onclick='ciphercode()'>.",true);
 			checkitem();
 		}
 		$(".ylvis-the-fox").hide();
@@ -1784,7 +1784,7 @@ story="\n\
   /         \\    that guy before, hmmmm...\"          /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
-  \\         /    <input type='button' value='Next >' onclick='guy(2)'>                              \n\
+  \\         /    <input type='button' value='下一个 >' onclick='guy(2)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
     / | | \\\n\
@@ -1800,7 +1800,7 @@ story="\n\
   /         \\    He is the one who brought me        /|\\\n\
  |           |   to this weird world >:C\"             |\n\
  |           |                                       / \\\n\
-  \\         /    <input type='button' value='Next >' onclick='guy(3)'>                              \n\
+  \\         /    <input type='button' value='下一个 >' onclick='guy(3)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
     / | | \\\n\
@@ -1816,7 +1816,7 @@ story="\n\
   /         \\                                        /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
-  \\         /    <input type='button' value='Next >' onclick='guy(4)'>                              \n\
+  \\         /    <input type='button' value='下一个 >' onclick='guy(4)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
     / | | \\\n\
@@ -1832,7 +1832,7 @@ story="\n\
   /         \\                   me, you idiot >:(\"   /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
-  \\         /    <input type='button' value='Fight!' onclick='guy(5)'>                              \n\
+  \\         /    <input type='button' value='战斗!' onclick='guy(5)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
     / | | \\\n\
@@ -1856,11 +1856,11 @@ PS: He heals 5 HP each time he attacks you, and he also has armor!";
 function openthechestfromsomeone() {
 	if(cheststep==0) {
 		closemessage();
-		makealert("chest-locked","Locked","The chest is locked, you need a key to open it!<br><br><input type='button' onclick='openthechest()' class='mediumbutton' value='Open the chest'>",true);
+		makealert("chest-locked","Locked","The chest is locked, you need a key to open it!<br><br><input type='button' onclick='openthechest()' class='mediumbutton' value='打开宝箱'>",true);
 	}
 	else if(cheststep==1) {
 		closemessage();
-		makealert("chest-locked2","Password?","Oh no! You need a password to open the chest. This chest is really annoying...<br><br>Please type the password<br><input type='text' id='chest-password-form'><br><br><input type='button' class='mediumbutton' value='Submit' onclick='openthechest()'>",true);
+		makealert("chest-locked2","Password?","Oh no! You need a password to open the chest. This chest is really annoying...<br><br>Please type the password<br><input type='text' id='chest-password-form'><br><br><input type='button' class='mediumbutton' value='提交' onclick='openthechest()'>",true);
 	}
 	else if(cheststep==2) {
 		closemessage();
@@ -1906,45 +1906,45 @@ function openthechest() {
 		if(items[21].owned==1) {
 			items[21].owned--;
 			cheststep++;
-			alert('The chest has been opened!');
+			alert('宝箱已打开!');
 			closemessage();
 		}
 		else {
-			alert('You need a key to open the chest!');
+			alert('你需要一把钥匙才能打开箱子!');
 		}
 	}
 	else if(cheststep==1) {
 		if($("#chest-password-form").val()=="password" || $("#chest-password-form").val()=="the password") {
-			alert('Sorry, this is not a trick question! Or another cipher, if you were wondering.');
+			alert('对不起，这不是一个恶作剧的问题！或者另一种密码，如果你想知道的话.');
 		}
 		else if($("#chest-password-form").val()=="Ring-ding-ding-ding-dingeringeding!") {
 			cheststep++;
-			alert('Correct password! Access granted!');
+			alert('密码正确！准许访问!');
 			closemessage();
 		}
 		else {
-			alert('Wrong password!');
+			alert('密码错误!');
 		}
 	}
 }
 
 function localstoragehelp() {
-	alert('It\'s a feature that allows the game to save progress in your browser. Technology!');
+	alert('这是一个允许游戏在浏览器中保存进度的功能。科技!');
 }
 
 function save() {
-	makealert("save","Save Options","Here, you can save your progress, or change options relating to doing that.<br><br><input type='button' value='Save game' class='mediumbutton' onclick='dosave(\"autolocalstorage\")'> (Uses HTML5 Local Storage <small>[<a href='javascript:localstoragehelp();' title='What is HTML5 Local Storage?'>?</a>]</small>)<br><input type='button' class='mediumbutton' value='Save game as text' onclick='dosave(\"text\")'><br><input type='button' value='Load game' class='mediumbutton' onclick='dosave(\"load\")'><br><input type='button' value='Reset game' class='mediumbutton' onclick='dosave(\"reset\")'><br><input type='button' value='Toggle autosave' class='mediumbutton' onclick='dosave(\"autotoggle\")'> Game autosaves in <span id='autosavetime'>"+autosavetime+"</span> second(s)",true);
+	makealert("save","Save Options","Here, you can save your progress, or change options relating to doing that.<br><br><input type='button' value='保存游戏' class='mediumbutton' onclick='dosave(\"autolocalstorage\")'> (Uses HTML5 Local Storage <small>[<a href='javascript:localstoragehelp();' title='What is HTML5 Local Storage?'>?</a>]</small>)<br><input type='button' class='mediumbutton' value='导出存档' onclick='dosave(\"text\")'><br><input type='button' value='加载游戏' class='mediumbutton' onclick='dosave(\"load\")'><br><input type='button' value='重置游戏' class='mediumbutton' onclick='dosave(\"reset\")'><br><input type='button' value='开关自动保存' class='mediumbutton' onclick='dosave(\"autotoggle\")'> Game autosaves in <span id='autosavetime'>"+autosavetime+"</span> second(s)",true);
 }
 
 function dosave(param) {
 	if(param=='autotoggle') {
 		if(autosave) {
 			autosave=false;
-			alert('Autosave disabled!');
+			alert('自动保存已禁用!');
 		}
 		else {
 			autosave=true;
-			alert('Autosave enabled!');
+			alert('自动保存已启用!');
 		}
 	}
 	else if(param=='text') {
@@ -1956,7 +1956,7 @@ function dosave(param) {
 		savecode=savecode.split("|");
 
 		if(savecode.length<75) {
-			alert('Invalid save code!');
+			alert('无效的保存代码!');
 			return;
 		}
 
@@ -2136,7 +2136,7 @@ function dosave(param) {
 	else if(param=="autolocalstorage") {
 
 		if(typeof(Storage) === "undefined") {
-			alert('Update your browser, dammit, it\'s 2024 and you still don\'t have local storage! How?');
+			alert('更新你的浏览器，该死，已经2025年了，你还没有本地存储！如何?');
 		}
 
 		localStorage.thegoldfactorygamesave=btoa(goldbar+"|"+ironbar+"|"+gbps+"|"+goldmining+"|"+ibpt+"|"+ibtime+"|"+ironmining+"|"+items[0].owned+"|"+items[1].owned+"|"+items[2].owned+"|"+items[3].owned+"|"+items[4].owned+"|"+items[5].owned+"|"+items[6].owned+"|"+items[7].owned+"|"+items[8].owned+"|"+items[9].owned+"|"+items[10].owned+"|"+items[11].owned+"|"+items[12].owned+"|"+items[13].owned+"|"+items[14].owned+"|"+items[15].owned+"|"+items[16].owned+"|"+items[17].owned+"|"+items[18].owned+"|"+items[19].owned+"|"+items[20].owned+"|"+items[21].owned+"|"+items[22].owned+"|"+items[23].owned+"|"+items[24].owned+"|"+enchant_attack+"|"+enchant_defense+"|"+enchant_countdown+"|"+enchant_life+"|"+helmet+"|"+chestplate+"|"+pants+"|"+boots+"|"+theusername+"|"+theuserdesc+"|"+cheststep+"|"+searchtimes+"|"+shovelbroken+"|"+cursor+"|"+pizzaeaten+"|"+poisoned+"|"+chestunderground+"|"+talk+"|"+wob+"|"+buyfactory+"|"+skill+"|"+skilllvl+"|"+additionalattack+"|"+clickcloudcount+"|"+openchestcount+"|"+candybox+"|"+hpactive+"|"+airplanecountdown+"|"+digcountdown+"|"+digstep+"|"+currentsword+"|"+passthief+"|"+passworms+"|"+passgate+"|"+unlockenchant+"|"+unlockchest+"|"+beatboss+"|"+hasairplane+"|"+reachedclouds+"|"+defeatinvisiblebot+"|"+gethole+"|"+win+"|"+hasportal+"|"+cipherstep+"|"+activatemachine+"|"+autosave+"|"+autoattack+"|"+pizzacollected)+"encrypted";
@@ -2346,18 +2346,18 @@ output2=output2+"</td><td><div style=\"text-align:center;\">VS</div></td><td>";
 output2=output2+"<b>"+name+"</b> (<span class=\"enemy-"+id+"-hp\">"+hp.toLocaleString("en")+"</span>/"+maxhp.toLocaleString("en")+")<br>Damage: "+damage.toLocaleString("en")+"<br>Weapon: "+weapon+"<br>\""+description+"\"";
 output2=output2+"</td></tr>";
 
-output="<table id=\"battle-"+id+"\">"+output2+"</table><br><div class=\"buttons-"+id+"\"><input type=\"button\" value=\"Attack!\" class=\"button-attack-"+id+" smallbutton\" onclick=\"attackenemy("+id+","+power+","+hp+",'"+param+"',"+mymaxhp+")\">\n\
+output="<table id=\"battle-"+id+"\">"+output2+"</table><br><div class=\"buttons-"+id+"\"><input type=\"button\" value=\"攻击!\" class=\"button-attack-"+id+" smallbutton\" onclick=\"attackenemy("+id+","+power+","+hp+",'"+param+"',"+mymaxhp+")\">\n\
 <input type=\"button\" value=\"["+items[7].owned.toLocaleString("en")+"] Health Potion\" style=\"display:none;\" class=\"button-health-"+id+" mediumbutton\" onclick=\"drinkhealthpotion("+id+","+mymaxhp+")\">\n\
-<input type=\"button\" value=\"Use skill\" style=\"display:none;\" class=\"button-skill-"+id+" mediumbutton\" onclick=\"usetheskill("+id+")\"><hr>\n\
-<input type=\"button\" value=\"["+items[12].owned.toLocaleString("en")+"] Poison\" class=\"button-potion-12-"+id+" smallbutton\" onclick=\"usepotion(12,"+id+")\">\n\
-<input type=\"button\" value=\"["+items[13].owned.toLocaleString("en")+"] Confusion\" class=\"button-potion-13-"+id+" smallbutton\" onclick=\"usepotion(13,"+id+")\">\n\
-<input type=\"button\" value=\"["+items[14].owned.toLocaleString("en")+"] Invisibility\" class=\"button-potion-14-"+id+" smallbutton\" onclick=\"usepotion(14,"+id+")\">\n\
-<input type=\"button\" value=\"["+items[15].owned.toLocaleString("en")+"] Countdown\" class=\"button-potion-15-"+id+" smallbutton\" onclick=\"usepotion(15,"+id+")\">\n\
-<input type=\"button\" value=\"["+items[16].owned.toLocaleString("en")+"] Gambler's\" class=\"button-potion-16-"+id+" smallbutton\" onclick=\"usepotion(16,"+id+")\">\n\
-<input type=\"button\" value=\"["+items[17].owned.toLocaleString("en")+"] Cookie\" class=\"button-potion-17-"+id+" smallbutton\" onclick=\"usepotion(17,"+id+")\">\n\
+<input type=\"button\" value=\"使用技能\" style=\"display:none;\" class=\"button-skill-"+id+" mediumbutton\" onclick=\"usetheskill("+id+")\"><hr>\n\
+<input type=\"button\" value=\"["+items[12].owned.toLocaleString("en")+"] 中毒\" class=\"button-potion-12-"+id+" smallbutton\" onclick=\"usepotion(12,"+id+")\">\n\
+<input type=\"button\" value=\"["+items[13].owned.toLocaleString("en")+"] 混乱\" class=\"button-potion-13-"+id+" smallbutton\" onclick=\"usepotion(13,"+id+")\">\n\
+<input type=\"button\" value=\"["+items[14].owned.toLocaleString("en")+"] 隐形\" class=\"button-potion-14-"+id+" smallbutton\" onclick=\"usepotion(14,"+id+")\">\n\
+<input type=\"button\" value=\"["+items[15].owned.toLocaleString("en")+"] 倒计时\" class=\"button-potion-15-"+id+" smallbutton\" onclick=\"usepotion(15,"+id+")\">\n\
+<input type=\"button\" value=\"["+items[16].owned.toLocaleString("en")+"] 赌徒\" class=\"button-potion-16-"+id+" smallbutton\" onclick=\"usepotion(16,"+id+")\">\n\
+<input type=\"button\" value=\"["+items[17].owned.toLocaleString("en")+"] 饼干\" class=\"button-potion-17-"+id+" smallbutton\" onclick=\"usepotion(17,"+id+")\">\n\
 <input type=\"button\" value=\"["+items[18].owned.toLocaleString("en")+"] X\" class=\"button-potion-18-"+id+" smallbutton\" onclick=\"usepotion(18,"+id+")\"> <span class=\"potion-countdown-"+id+"\"></span></div>\n\
-<hr class=\"potion-separator-"+id+"\"><input type=\"button\" value=\"Flee!\" class='smallbutton flee-button' onclick=\"closemessage(); battle_ended();\">\n\
-<input type=\"button\" value=\"Toggle auto-attack\" class='mediumbutton' onclick=\"toggleautoattack("+id+");\">";
+<hr class=\"potion-separator-"+id+"\"><input type=\"button\" value=\"逃跑!\" class='smallbutton flee-button' onclick=\"closemessage(); battle_ended();\">\n\
+<input type=\"button\" value=\"切换自动攻击\" class='mediumbutton' onclick=\"toggleautoattack("+id+");\">";
 	if(hp<=0) {
 		if(winningbattle == false)
 			{
@@ -2421,13 +2421,13 @@ function toggleautoattack(id)
 {
 	autoattack = !autoattack;
 	if(autoattack) {
-		alert("Auto-attack is now enabled!");
+		alert("自动攻击现在已启用!");
 		if($(".button-attack-"+id).attr("disabled") == undefined) {
 			$(".button-attack-"+id).click();
 		}
 	}
 	else {
-		alert("Auto-attack is now disabled.");
+		alert("自动攻击现在已禁用.");
 	}
 }
 function enemyattack(id,damage) {
@@ -2515,7 +2515,7 @@ function enemyattack(id,damage) {
 }
 function attackenemy(id,power,hp,param,mymaxhp) {
 	if(theenemyascii(false,0)==9 && isinvisible(false,0)==false) {
-		alert('You can\'t attack the bot because you can\'t see it!');
+		alert('你不能攻击机器人，因为你看不见它！');
 		return;
 	}
 	if(enemyhealthpoint(false,0)<=0) {
@@ -2570,7 +2570,7 @@ function attackenemy(id,power,hp,param,mymaxhp) {
 function attackdelay(id,sec) {
 	if(sec!=0) {
 		$(".button-attack-"+id).attr("disabled",true);
-		$(".button-attack-"+id).attr("value","Attack! ("+sec+")");
+		$(".button-attack-"+id).attr("value","攻击! ("+sec+")");
 		sec--;
 		attacktimeout=setTimeout(function(){attackdelay(id,sec);},1000);
 	}
@@ -2858,7 +2858,7 @@ chest='\n\
 %  \\|%________|\n\
  %%%%';
 		goldbar+=2500;
-		html="<div class=\"alert alert-chest-unlocked\"><b>A Chest!</b><br>The chest contains 2,500 gold bars and an ancient scroll.<br><br><pre>"+chest+"</pre><br><br><input type=\"button\" value=\"Read scroll\" class=\"mediumbutton\" onclick=\"readscroll()\"></div>";
+		html="<div class=\"alert alert-chest-unlocked\"><b>A Chest!</b><br>The chest contains 2,500 gold bars and an ancient scroll.<br><br><pre>"+chest+"</pre><br><br><input type=\"button\" value=\"阅读卷轴\" class=\"mediumbutton\" onclick=\"readscroll()\"></div>";
 		items[8].owned=1;
 		$("#otheralerts").append(html);
 		closemessage();
@@ -2937,7 +2937,7 @@ scroll='\n\
 		$(".buttons-"+id).hide();
 		$(".enemy-"+id+"-hp").html('1');
 		setTimeout(function(){
-			makealert("boss-win","Almost!","<div style='max-height:300px; overflow-y:auto;'>Just when you thought it was all over...<br>...the guy managed to get away.<br><br><br><br><br><br>But...<br><br><br><br>You have learned something...<br><br><br><br><br><br><br><br>Revenge won't solve any of your problems.<br><br><br><br><br><br><br><br>You have to acknowledge them and talk to others.<br><br><br><br><br><br><br><br>And since killing him won't solve the problem...<br><br><br><br><br><br><br><br>You choose to talk to the guy, instead.<br><br><br><br>It seems it was all just a big misunderstanding.<br><br><br><br>He wants to help you return back to the real world...<br><br><br><br>But, you chose to stay in this 'weird' world.<br><br><br><br>After all, you have done so many things here...<br><br><br><br>So, you learned to love this world.<br><br><br><br>You don't even think about going back anymore.<br><br><br><br><br><br><br><br>Oh, and by the way, he also left a very cool-looking chest for you! I wonder what's inside :o<br><br><br><br><input type='button' onclick='openthechestfromsomeone()' class='mediumbutton' value='Open the chest'><br><br></div>",true);
+			makealert("boss-win","Almost!","<div style='max-height:300px; overflow-y:auto;'>Just when you thought it was all over...<br>...the guy managed to get away.<br><br><br><br><br><br>But...<br><br><br><br>You have learned something...<br><br><br><br><br><br><br><br>Revenge won't solve any of your problems.<br><br><br><br><br><br><br><br>You have to acknowledge them and talk to others.<br><br><br><br><br><br><br><br>And since killing him won't solve the problem...<br><br><br><br><br><br><br><br>You choose to talk to the guy, instead.<br><br><br><br>It seems it was all just a big misunderstanding.<br><br><br><br>He wants to help you return back to the real world...<br><br><br><br>But, you chose to stay in this 'weird' world.<br><br><br><br>After all, you have done so many things here...<br><br><br><br>So, you learned to love this world.<br><br><br><br>You don't even think about going back anymore.<br><br><br><br><br><br><br><br>Oh, and by the way, he also left a very cool-looking chest for you! I wonder what's inside :o<br><br><br><br><input type='button' onclick='openthechestfromsomeone()' class='mediumbutton' value='打开宝箱'><br><br></div>",true);
 			$(".button-close-window-boss-win").hide();
 		},2000);
 	}
@@ -2946,10 +2946,10 @@ scroll='\n\
 		reward=enemyhealthpoint2(false,0);
 		goldbar+=reward;
 		if(!buyfactory){
-			makealert("win-vs-rat","Goodbye, Rat!","You killed the rat, and your boss gave you "+reward+" gold bars!<br><br><input type='button' value=\"Kill more rats!\" class='mediumbutton' onclick='battlevsrats()'>",true);
+			makealert("win-vs-rat","Goodbye, Rat!","You killed the rat, and your boss gave you "+reward+" gold bars!<br><br><input type='button' value=\"击杀更多老鼠!\" class='mediumbutton' onclick='battlevsrats()'>",true);
 		}
 		else{
-			makealert("win-vs-rat","Goodbye, Rat!","You killed the rat, and you found it hoarding "+reward+" gold bars!<br><br><input type='button' value=\"Kill more rats!\" class='mediumbutton' onclick='battlevsrats()'>",true);
+			makealert("win-vs-rat","Goodbye, Rat!","You killed the rat, and you found it hoarding "+reward+" gold bars!<br><br><input type='button' value=\"击杀更多老鼠!\" class='mediumbutton' onclick='battlevsrats()'>",true);
 		}
 	}
 	else if(param=="vs-shark"){
@@ -2975,7 +2975,7 @@ function dig(countdown,cheat) {
 				digabcd=setInterval(function(){digcountdown--;},60000);
 			}
 			else {
-				makealert("dig-countdown","Digging","You are currently digging.<br>Time left: <span class='digcd'>"+digcountdown+"</span> 	minute(s) remaining.<br>You can use extra shovels to dig faster!<br><br><input type='button' value='Use another shovel' onclick='hurrydig()' class='mediumbutton' id='hurry-dig-button'>",true);
+				makealert("dig-countdown","Digging","You are currently digging.<br>Time left: <span class='digcd'>"+digcountdown+"</span> 	minute(s) remaining.<br>You can use extra shovels to dig faster!<br><br><input type='button' value='使用其他铲子' onclick='hurrydig()' class='mediumbutton' id='hurry-dig-button'>",true);
 				checkthings();
 			}
 			return;
@@ -3107,7 +3107,7 @@ function putitem() {
 			}
 		}
 		if(wontput) {
-			alert("You don't have that many!");
+			alert("你没有那么多！");
 		}
 		else {
 			thecauldron("add",theitem,quantity);
@@ -3175,7 +3175,7 @@ function mixitems() {
 	if (qty["7"] && qty["goldbar"] && qty["goldbar"] % 100 === 0 && qty["7"] % 1 === 0 &&
 		onlyContains(cldr, ["7", "goldbar"])) {
 		if (qty["goldbar"] / 100 === qty["7"]) {
-			alert('You made ' + (qty["goldbar"] / 100) + ' empty potion(s)!');
+			alert('你制作了 ' + (qty["goldbar"] / 100) + ' 空药水!');
 			items[11].owned += qty["goldbar"] / 100;
 		}	
 	}
@@ -3183,21 +3183,21 @@ function mixitems() {
 	else if (qty["11"] && qty["7"] && qty["ironbar"] &&
 		qty["11"] === qty["7"] && qty["7"] === (qty["ironbar"] / 100) &&
 		onlyContains(cldr, ["11", "7", "ironbar"])) {
-		alert('You made ' + (qty["ironbar"] / 100) + ' poison potion(s)!');
+		alert('你制作了 ' + (qty["ironbar"] / 100) + ' 毒药!');
 		items[12].owned += qty["ironbar"] / 100;
 	}
 
 	else if (qty["12"] && qty["goldbar"] && qty["goldbar"] % 200 === 0 &&
 		qty["goldbar"] / 200 === qty["12"] &&
 		onlyContains(cldr, ["12", "goldbar"])) {
-		alert('You made ' + (qty["goldbar"] / 200) + ' confusion potion(s)!');
+		alert('你制作了 ' + (qty["goldbar"] / 200) + ' 混乱药水!');
 		items[13].owned += qty["goldbar"] / 200;
 	}
 
 	else if (qty["11"] && qty["ironbar"] && qty["ironbar"] % 500 === 0 &&
 		qty["ironbar"] / 500 === qty["11"] &&
 		onlyContains(cldr, ["11", "ironbar"])) {
-		alert('You made ' + (qty["ironbar"] / 500) + ' invisibility potion(s)!');
+		alert('你制作了 ' + (qty["ironbar"] / 500) + ' 隐形药水!');
 		items[14].owned += qty["ironbar"] / 500;
 	}
 
@@ -3205,7 +3205,7 @@ function mixitems() {
 		qty["goldbar"] % 2000 === 0 && qty["19"] % 20 === 0 &&
 		qty["goldbar"] / 2000 === qty["11"] && qty["19"] / 20 === qty["11"] &&
 		onlyContains(cldr, ["11", "19", "goldbar"])) {
-		alert('You made ' + (qty["goldbar"] / 2000) + ' instant countdown potion(s)!');
+		alert('你制作了 ' + (qty["goldbar"] / 2000) + ' 即时倒计时药水!');
 		items[15].owned += qty["goldbar"] / 2000;
 	}
 
@@ -3215,38 +3215,38 @@ function mixitems() {
 		qty["17"] === 1 && qty["goldbar"] === 100000 && qty["ironbar"] === 100000 &&
 		onlyContains(cldr, ["11", "12", "13", "14", "15", "16", "17", "goldbar", "ironbar"])
 	) {
-		alert('You made an X potion :o');
+		alert('你制作了 X 药水 :o');
 		items[18].owned++;
 	}
 
 	else if (qty["11"] && qty["12"] && qty["13"] &&
 		qty["11"] === qty["12"] && qty["12"] === qty["13"] &&
 		onlyContains(cldr, ["11", "12", "13"])) {
-		alert('You made ' + qty["11"] + ' gambler\'s potion(s)!');
+		alert('你制作了 ' + qty["11"] + ' 赌徒药水!');
 		items[16].owned += qty["11"];
 	}
 
 	else if (qty["11"] && qty["19"] && qty["19"] % 500 === 0 &&
 		qty["19"] / 500 === qty["11"] &&
 		onlyContains(cldr, ["11", "19"])) {
-		alert('You made ' + (qty["19"] / 500) + ' cookie potion(s)!');
+		alert('你制作了 ' + (qty["19"] / 500) + ' 饼干药水!');
 		items[17].owned += qty["19"] / 500;
 	}
 
 	else if (qty["goldbar"] === 1 && qty["ironbar"] === 1 && qty["7"] === 1 &&
 		onlyContains(cldr, ["goldbar", "ironbar", "7"])) {
-		alert('You made a secret potion!');
+		alert('你做了一个秘密药水!');
 		items[20].owned++;
 	}
 
 	else if (qty["ironbar"] && qty["ironbar"] % 10 === 0 &&
 		onlyContains(cldr, ["ironbar"])) {
-		alert('You made ' + (qty["ironbar"] / 10) + ' shuriken(s)!');
+		alert('你制作了 ' + (qty["ironbar"] / 10) + ' 手里剑!');
 		items[25].owned += qty["ironbar"] / 10;
 	}
 
 	else {
-		alert('You made nothing. To make multiple potions, make sure to multiply ALL ingredients needed!');
+		alert('你什么也没做。要制作多种药剂，请确保将所需的所有成分相乘!');
 	}
 
 	thecauldron("make", 0, 0);
@@ -3256,7 +3256,7 @@ function mixitems() {
 
 function makebosshappy() {
 	closemessage();
-	makealert("how-to-make-boss-happy","Make your boss happier","To make him happier and get some extra gold bars, you can do these things:<br><br><input type='button' value='Kill some rats that sometimes enter the factory at night' onclick='killrats()'><br><input type='button' value='Help him decipher messages' onclick='ciphercode()'>",true);
+	makealert("how-to-make-boss-happy","Make your boss happier","To make him happier and get some extra gold bars, you can do these things:<br><br><input type='button' value='杀死一些有时在晚上进入工厂的老鼠' onclick='killrats()'><br><input type='button' value='帮助他破译信息' onclick='ciphercode()'>",true);
 }
 function killrats() {
 	if(items[2].owned==0) {
@@ -3265,7 +3265,7 @@ function killrats() {
 	}
 	else {
 		closemessage();
-		makealert("kill-rats","Kill some rats","Finding the rats is not a big deal - the problem is that these rats can fight back!<br><br><input type='button' value=\"I'm ready!\" class='mediumbutton' onclick='battlevsrats()'>",true);
+		makealert("kill-rats","Kill some rats","Finding the rats is not a big deal - the problem is that these rats can fight back!<br><br><input type='button' value=\"我准备好了!\" class='mediumbutton' onclick='battlevsrats()'>",true);
 	}
 }
 function ciphercode() {
@@ -3301,10 +3301,10 @@ function ciphercode() {
 	}
 	if(cipherstep<9) {
 		if(!buyfactory) {
-			makealert("help-ciphering","Decipher some messages","Your boss loves cryptography, but he isn't very good at it. If you can help him, he promises to give you extra gold bars as a reward!<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='Submit' class='smallbutton' onclick='checkcipher()'><input type='button' value='Hint' class='smallbutton' onclick='gethint()'>",true);
+			makealert("help-ciphering","Decipher some messages","Your boss loves cryptography, but he isn't very good at it. If you can help him, he promises to give you extra gold bars as a reward!<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='提交' class='smallbutton' onclick='checkcipher()'><input type='button' value='提示' class='smallbutton' onclick='gethint()'>",true);
 		}
 		else {
-			makealert("help-ciphering","Decipher some messages","Your old boss left you a book with some codes. He promises to keep rewarding you, as long as you keep solving them!<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='Submit' class='smallbutton' onclick='checkcipher()'><input type='button' value='Hint' class='smallbutton' onclick='gethint()'>",true);
+			makealert("help-ciphering","Decipher some messages","Your old boss left you a book with some codes. He promises to keep rewarding you, as long as you keep solving them!<br><br>Code #"+(cipherstep+1)+":<br>"+codetocipher+"<br><input type='text' id='cipherthecodeanswer'><br><br><input type='button' value='提交' class='smallbutton' onclick='checkcipher()'><input type='button' value='提示' class='smallbutton' onclick='gethint()'>",true);
 		}
 	}
 	else {
@@ -3333,7 +3333,7 @@ function checkcipher() {
 			cipherstep++;
 			goldbar+=100;
 			closemessage();
-			alert("Correct! Since this is an easy one, you only get 100 gold bars.");
+			alert("正确! 因为这是一个简单的问题，你只能得到100个金条。");
 			ciphercode();
 		}
 		else {
@@ -3345,7 +3345,7 @@ function checkcipher() {
 			cipherstep++;
 			goldbar+=250;
 			closemessage();
-			alert("Correct! You get 250 gold bars!");
+			alert("正确! 你得到250个金条!");
 			ciphercode();
 		}
 		else {
@@ -3357,7 +3357,7 @@ function checkcipher() {
 			cipherstep++;
 			items[7].owned += 5;
 			closemessage();
-			alert("Correct! You get 5 health potions!");
+			alert("正确! 你得到5生命药水!");
 			ciphercode();
 		}
 		else {
@@ -3369,7 +3369,7 @@ function checkcipher() {
 			cipherstep++;
 			goldbar+=500;
 			closemessage();
-			alert("Correct! You get 500 gold bars!");
+			alert("正确! 你得到500金条!");
 			ciphercode();
 		}
 		else {
@@ -3381,7 +3381,7 @@ function checkcipher() {
 			cipherstep++;
 			ironbar+=50;
 			closemessage();
-			alert("Correct! You get 50 iron bars!");
+			alert("正确！你得到50铁条!");
 			ciphercode();
 		}
 		else {
@@ -3393,7 +3393,7 @@ function checkcipher() {
 			cipherstep++;
 			goldbar+=750;
 			closemessage();
-			alert("Correct! You get 750 gold bars!");
+			alert("正确！你得到750金条!");
 			ciphercode();
 		}
 		else {
@@ -3405,7 +3405,7 @@ function checkcipher() {
 			cipherstep++;
 			items[12].owned += 3;
 			closemessage();
-			alert("Correct! You get 3 poison potions! Use them wisely!");
+			alert("正确！你得到3种毒药！明智地使用它们!");
 			ciphercode();
 		}
 		else {
@@ -3417,7 +3417,7 @@ function checkcipher() {
 			cipherstep++;
 			goldbar+=1000;
 			closemessage();
-			alert("Correct! Because this is a hard one, you get 1,000 gold bars!");
+			alert("正确！因为这个比较难，你可以得到1000金条！");
 			ciphercode();
 		}
 		else {
@@ -3429,7 +3429,7 @@ function checkcipher() {
 			cipherstep++;
 			items[15].owned += 1;
 			closemessage();
-			alert("That's all, folks! You get an instant countdown potion - be careful with it!");
+			alert("就这样，伙计们！你得到一个即时倒计时药水-小心使用它!");
 		}
 		else {
 			alert(wrongmessage);
@@ -3438,7 +3438,7 @@ function checkcipher() {
 }
 
 function gethint() {
-	let hints = ["Hint: ABC, Its easy as 123!", "Hint: The Romans would be furious with you!", "Hint: Save Our Souls!", "Hint: You use this to type!", "Hint: Who even needs vision, anyway?", "Hint: (8*4) - 16 + ((24/2) * 4)", "Hint: Square coordinates!", "Hint: You know the rails and the fence? Combine them and keep going! There may be multiple stops.", "Hint: Use everything you've learned! You've got this!"];
+	let hints = ["提示: ABC, 就像 123 那样简单!", "提示: 罗马人会对你大发雷霆的!", "提示: 拯救我们的灵魂!", "提示: You use this to type!", "提示: 谁还需要视力呢?", "提示: (8*4) - 16 + ((24/2) * 4)", "提示: 平方坐标!", "提示: 你知道铁轨和栅栏吗？把它们结合起来，继续前进！可能会有多站.", "提示: 运用你所学到的一切！你有这个!"];
 	alert(hints[cipherstep]);
 }
 

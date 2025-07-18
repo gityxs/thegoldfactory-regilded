@@ -44,55 +44,55 @@
 	<div id="otheritems"></div>
 </div>
 <br><br>
-<input type="button" value="Close this window" onclick="closemessage()" class="mediumbutton">
+<input type="button" value="关闭这个窗口" onclick="closemessage()" class="mediumbutton">
 </div>
 
 <div class="alert alert-gold-factory">
 <b>The Gold Factory</b><br>
 Status: You work here, and you are getting 1 gold bar per second as your salary.
 <br><br>
-<input type="button" value="Close this window" onclick="closemessage()" class="mediumbutton">
+<input type="button" value="关闭这个窗口" onclick="closemessage()" class="mediumbutton">
 </div>
 
 <div class="alert alert-theshop">
 <b>The Shop</b><br>
 What do you want to buy, fellow adventurer?<br><br>
-<input type="button" value="A shovel" onclick="buy('shovel',1)" class="buy-shovel smallbutton" disabled> (50 gold bars)<br>
-<input type="button" value="Pizza" onclick="buy('pizza',1)" class="buy-pizza smallbutton" disabled> (20 gold bars)<br>
-<input type="button" value="20 Pizzas" onclick="buy('pizza',20)" class="buy-pizza-20 smallbutton" disabled> (400 gold bars)<br>
-<span class="wooden-sword-shop"><input type="button" value="Wooden sword" onclick="buy('wooden sword',1)" class="buy-wooden-sword smallbutton" disabled> (50 gold bars)</span>
-<span class="stone-sword-shop" style="display:none;"><input type="button" value="Stone sword" onclick="buy('stone sword',1)" class="buy-stone-sword smallbutton" disabled> (500 gold bars)</span>
+<input type="button" value="一把铲子" onclick="buy('shovel',1)" class="buy-shovel smallbutton" disabled> (50 gold bars)<br>
+<input type="button" value="披萨" onclick="buy('pizza',1)" class="buy-pizza smallbutton" disabled> (20 gold bars)<br>
+<input type="button" value="20 披萨" onclick="buy('pizza',20)" class="buy-pizza-20 smallbutton" disabled> (400 gold bars)<br>
+<span class="wooden-sword-shop"><input type="button" value="木剑" onclick="buy('wooden sword',1)" class="buy-wooden-sword smallbutton" disabled> (50 gold bars)</span>
+<span class="stone-sword-shop" style="display:none;"><input type="button" value="石剑" onclick="buy('stone sword',1)" class="buy-stone-sword smallbutton" disabled> (500 gold bars)</span>
 <span class="no-sword-upgrade" style="display:none;">Sorry, the stone sword is the best sword I have.</span>
 <br><br>
-<input type="button" value="Close this window" onclick="closemessage()" class="mediumbutton">
+<input type="button" value="关闭这个窗口" onclick="closemessage()" class="mediumbutton">
 </div>
 
 <div class="alert alert-anothershop">
 <b>Another Shop</b><br>
 Hi! Welcome to my shop! :D<br><br>
-<input type="button" value="10 Iron Bars" onclick="goldbar-=100; ironbar+=10; checkthings();" class="buy-iron-bar smallbutton" disabled> (100 gold bars)<br>
-<input type="button" value="100 Pizzas" onclick="buy('pizza',100)" class="buy-pizza-20 smallbutton" disabled> (2000 gold bars)<br>
-<input type="button" value="Health Potion" onclick="buy('health potion',1)" class="buy-health-potion smallbutton"> (50 gold bars)<br>
-<span class="iron-sword-shop"><input type="button" value="Iron sword" onclick="buy('iron sword',1)" class="buy-iron-sword smallbutton" disabled> (1000 gold bars + stone sword)</span>
-<span class="diamond-sword-shop" style="display:none;"><input type="button" value="Diamond sword" onclick="buy('diamond sword',1)" class="buy-diamond-sword smallbutton" disabled> (3000 gold bars)</span>
+<input type="button" value="10 铁条" onclick="goldbar-=100; ironbar+=10; checkthings();" class="buy-iron-bar smallbutton" disabled> (100 gold bars)<br>
+<input type="button" value="100 披萨" onclick="buy('pizza',100)" class="buy-pizza-20 smallbutton" disabled> (2000 gold bars)<br>
+<input type="button" value="生命药水" onclick="buy('health potion',1)" class="buy-health-potion smallbutton"> (50 gold bars)<br>
+<span class="iron-sword-shop"><input type="button" value="铁剑" onclick="buy('iron sword',1)" class="buy-iron-sword smallbutton" disabled> (1000 gold bars + stone sword)</span>
+<span class="diamond-sword-shop" style="display:none;"><input type="button" value="钻石剑" onclick="buy('diamond sword',1)" class="buy-diamond-sword smallbutton" disabled> (3000 gold bars)</span>
 <span class="need-iron" style="display:none;">Sorry, I have no more swords :(</span>
 <br><br>
-<input type="button" value="Close this window" onclick="closemessage()" class="mediumbutton">
+<input type="button" value="关闭这个窗口" onclick="closemessage()" class="mediumbutton">
 </div>
 
 <div class="alert alert-sign">
 <b>A sign</b><br>
 <i>"There is a hole here!"</i><br>
 Not sure why you needed the sign to tell you that, but it must be important.<br><br>
-<input type="button" value="Dig the hole" onclick="dighole()" class="mediumbutton"><br>
-<input type="button" value="Close this window" class="mediumbutton" onclick="closemessage()">
+<input type="button" value="挖洞" onclick="dighole()" class="mediumbutton"><br>
+<input type="button" value="关闭这个窗口" class="mediumbutton" onclick="closemessage()">
 </div>
 
 <div class="alert alert-dig-step-1">
 <b>A hole</b><br>
 This is an "unfinished" hole.<br><br>
-<input type="button" value="Continue digging" class="mediumbutton" onclick="continuedigging()"><br>
-<input type="button" value="Close this window" class="mediumbutton" onclick="closemessage()">
+<input type="button" value="继续挖" class="mediumbutton" onclick="continuedigging()"><br>
+<input type="button" value="关闭这个窗口" class="mediumbutton" onclick="closemessage()">
 </div>
 
 <div id="otheralerts"></div>
