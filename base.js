@@ -120,12 +120,12 @@ function updateitems() {
 	$(".enchant-defense-price").html((enchant_defense*enchant_defense*2500+2500).toLocaleString("en"));
 	$(".enchant-countdown-price").html((enchant_countdown*enchant_countdown*5000+5000).toLocaleString("en"));
 	$(".enchant-life-price").html((enchant_life*enchant_life*2500+2500).toLocaleString("en"));
-	$(".button-enchant-attack").attr("value","Attack "+(enchant_attack+1).toLocaleString("en"));
-	$(".button-enchant-defense").attr("value","Defense "+(enchant_defense+1).toLocaleString("en"));
-	$(".button-enchant-life").attr("value","Life "+(enchant_life+1).toLocaleString("en"));
+	$(".button-enchant-attack").attr("value","攻击 "+(enchant_attack+1).toLocaleString("en"));
+	$(".button-enchant-defense").attr("value","防御 "+(enchant_defense+1).toLocaleString("en"));
+	$(".button-enchant-life").attr("value","生命值 "+(enchant_life+1).toLocaleString("en"));
 
 	if(enchant_countdown==0) {
-		$(".button-enchant-countdown").attr("value","Countdown 1");
+		$(".button-enchant-countdown").attr("value","冷却 1");
 	}
 	else {
 		$(".button-enchant-countdown").attr("disabled",true);
@@ -155,64 +155,64 @@ function updateitems() {
 	}
 
 	if(helmet==0) {
-		$(".button-buy-helmet").val("Buy a leather helmet");
+		$(".button-buy-helmet").val("购买一个皮盔");
 	}
 	else if(helmet==1) {
-		$(".button-buy-helmet").val("Buy a chain helmet");
+		$(".button-buy-helmet").val("购买一个链盔");
 	}
 	else if(helmet==2) {
-		$(".button-buy-helmet").val("Buy an iron helmet");
+		$(".button-buy-helmet").val("购买一个铁盔");
 	}
 	else if(helmet==3) {
-		$(".button-buy-helmet").val("Buy a diamond helmet");
+		$(".button-buy-helmet").val("购买一个钻石盔");
 	}
 	else {
 		$(".helmet-area").html("Sorry, I have no better helmet for you.");
 	}
 
 	if(chestplate==0) {
-		$(".button-buy-chestplate").val("Buy a leather chestplate");
+		$(".button-buy-chestplate").val("购买一个皮板甲");
 	}
 	else if(chestplate==2) {
-		$(".button-buy-chestplate").val("Buy a chain chestplate");
+		$(".button-buy-chestplate").val("购买一个链甲");
 	}
 	else if(chestplate==4) {
-		$(".button-buy-chestplate").val("Buy an iron chestplate");
+		$(".button-buy-chestplate").val("购买一个铁板甲");
 	}
 	else if(chestplate==6) {
-		$(".button-buy-chestplate").val("Buy a diamond plate");
+		$(".button-buy-chestplate").val("购买一个钻石板甲");
 	}
 	else {
 		$(".chestplate-area").html("Sorry, I have no better chestplate for you.");
 	}
 
 	if(pants==0) {
-		$(".button-buy-pants").val("Buy leather pants");
+		$(".button-buy-pants").val("购买一个皮裤");
 	}
 	else if(pants==1.5) {
-		$(".button-buy-pants").val("Buy chain pants");
+		$(".button-buy-pants").val("购买一个链裤");
 	}
 	else if(pants==3) {
-		$(".button-buy-pants").val("Buy iron pants");
+		$(".button-buy-pants").val("购买一个铁裤");
 	}
 	else if(pants==4.5) {
-		$(".button-buy-pants").val("Buy diamond pants");
+		$(".button-buy-pants").val("购买一个钻石裤");
 	}
 	else {
 		$(".pants-area").html("Sorry, I have no better pants for you.");
 	}
 
 	if(boots==0) {
-		$(".button-buy-boots").val("Buy leather boots");
+		$(".button-buy-boots").val("购买一个皮靴");
 	}
 	else if(boots==0.5) {
-		$(".button-buy-boots").val("Buy chain boots");
+		$(".button-buy-boots").val("购买一个链靴");
 	}
 	else if(boots==1) {
-		$(".button-buy-boots").val("Buy iron boots");
+		$(".button-buy-boots").val("购买一个铁靴");
 	}
 	else if(boots==1.5	) {
-		$(".button-buy-boots").val("Buy diamond boots");
+		$(".button-buy-boots").val("购买一个钻石靴");
 	}
 	else {
 		$(".boots-area").html("Sorry, I have no better boots for you.");
@@ -2347,7 +2347,7 @@ output2=output2+"<b>"+name+"</b> (<span class=\"enemy-"+id+"-hp\">"+hp.toLocaleS
 output2=output2+"</td></tr>";
 
 output="<table id=\"battle-"+id+"\">"+output2+"</table><br><div class=\"buttons-"+id+"\"><input type=\"button\" value=\"攻击!\" class=\"button-attack-"+id+" smallbutton\" onclick=\"attackenemy("+id+","+power+","+hp+",'"+param+"',"+mymaxhp+")\">\n\
-<input type=\"button\" value=\"["+items[7].owned.toLocaleString("en")+"] Health Potion\" style=\"display:none;\" class=\"button-health-"+id+" mediumbutton\" onclick=\"drinkhealthpotion("+id+","+mymaxhp+")\">\n\
+<input type=\"button\" value=\"["+items[7].owned.toLocaleString("en")+"] 生命药水\" style=\"display:none;\" class=\"button-health-"+id+" mediumbutton\" onclick=\"drinkhealthpotion("+id+","+mymaxhp+")\">\n\
 <input type=\"button\" value=\"使用技能\" style=\"display:none;\" class=\"button-skill-"+id+" mediumbutton\" onclick=\"usetheskill("+id+")\"><hr>\n\
 <input type=\"button\" value=\"["+items[12].owned.toLocaleString("en")+"] 中毒\" class=\"button-potion-12-"+id+" smallbutton\" onclick=\"usepotion(12,"+id+")\">\n\
 <input type=\"button\" value=\"["+items[13].owned.toLocaleString("en")+"] 混乱\" class=\"button-potion-13-"+id+" smallbutton\" onclick=\"usepotion(13,"+id+")\">\n\
