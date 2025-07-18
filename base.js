@@ -3326,7 +3326,7 @@ function battlevsrats() {
 }
 function checkcipher() {
 
-	let wrongmessage = "Incorrect!";
+	let wrongmessage = "正确!";
 
 	if(cipherstep==0) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="master branch") {
