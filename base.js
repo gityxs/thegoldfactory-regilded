@@ -955,27 +955,45 @@ story="\n\
 		}
 	});
 
-	a=setInterval(function() {
-		ironcounter++;
-		if(ironcounter >= ibtime)
-		{
-			ironbar += ibpt;
-			ironcounter = 0;
+	let ironTimer = 0;
+	let goldTimer = 0;
+	let pizzaTimer = 0;
+
+	let lastTime = Date.now();
+
+	function gameLoop() {
+		const now = Date.now();
+		const delta = (now - lastTime) / 1000;
+		lastTime = now;
+
+		ironTimer += delta;
+		goldTimer += delta;
+		pizzaTimer += delta;
+
+		if (ironTimer >= ibtime) {
+			let ironCycles = Math.floor(ironTimer / ibtime);
+			ironbar += ironCycles * ibpt;
+			ironTimer -= ironCycles * ibtime;
 		}
-		checkthings();
-	},1000);
-	checkthings();
-	setInterval(function() {
-		goldbar+=gbps;
-		checkthings();
-	},1000);
-	setInterval(function() {
-		if(pizzaeaten)
-		{
-			items[3].owned += 1;
-			checkthings();
+
+		if (goldTimer >= 1) {
+			let goldCycles = Math.floor(goldTimer);
+			goldbar += goldCycles * gbps;
+			goldTimer -= goldCycles;
 		}
-	},5000);
+
+		if (pizzaeaten && pizzaTimer >= 5) {
+			let pizzaCycles = Math.floor(pizzaTimer / 5);
+			items[3].owned += pizzaCycles;
+			pizzaTimer -= pizzaCycles * 5;
+		}
+
+		checkthings();
+		requestAnimationFrame(gameLoop);
+	}
+
+	gameLoop();
+
 });
 function checkthings() {
 	updategold();
@@ -2456,7 +2474,7 @@ function enemyattack(id,damage) {
 							enemyhp=enemyhealthpoint(false,0);
 							enemyhp-=damage;
 							enemyhealthpoint(true,enemyhp);
-							$(".enemy-"+id+"-hp").html(enemyhp);
+							$(".enemy-"+id+"-hp").html(enemyhp.toLocaleString("en"));
 							enemyconfused(true,false);
 							lagipusing=true;
 
@@ -2487,12 +2505,12 @@ function enemyattack(id,damage) {
 							$(".enemy-"+id).animate({"margin-left":0+"px"},200);
 							$(".enemy-sword-"+id).animate({"margin-left":21+"px"},200);
 						}
-						$(".player-"+id+"-hp").html(myhp);
+						$(".player-"+id+"-hp").html(myhp.toLocaleString("en"));
 						$(".button-attack-"+id).attr("disabled",true);
 					}
 					else {
 						myhp=myhealthpoint(false,0);
-						$(".player-"+id+"-hp").html(myhp);
+						$(".player-"+id+"-hp").html(myhp.toLocaleString("en"));
 						if(!lagipusing) {
 							$(".enemy-"+id).animate({"margin-left":0+"px"},200);
 							$(".enemy-sword-"+id).animate({"margin-left":21+"px"},200);
@@ -2502,7 +2520,7 @@ function enemyattack(id,damage) {
 							hp=enemyhealthpoint(false,0);
 							hp+=5;
 							enemyhealthpoint(true,hp);
-							$(".enemy-"+id+"-hp").html(hp);
+							$(".enemy-"+id+"-hp").html(hp.toLocaleString("en"));
 						}
 						// Schedule a new attack
 						enemy_attack_timer = setTimeout(function(){enemyattack(id,damage);},1800+Math.random()*1000);
@@ -2535,7 +2553,7 @@ function attackenemy(id,power,hp,param,mymaxhp) {
 				myhp=mymaxhp;
 			}
 			myhealthpoint(true,myhp);
-			$(".player-"+id+"-hp").html(myhp);
+			$(".player-"+id+"-hp").html(myhp.toLocaleString("en"));
 			playerisattacking=true;
 			attackdelay(id,mindelay);
 			$(".player-"+id).animate({"margin-left":160+"px"},200);
@@ -2557,7 +2575,7 @@ function attackenemy(id,power,hp,param,mymaxhp) {
 				}
 				else {
 					hp=enemyhealthpoint(false,0);
-					$(".enemy-"+id+"-hp").html(hp);
+					$(".enemy-"+id+"-hp").html(hp.toLocaleString("en"));
 					$(".player-"+id).animate({"margin-left":0+"px"},200);
 					$(".player-sword-"+id).animate({"margin-left":50+"px"},200);
 					$(".button-attack-"+id).attr("onclick","attackenemy("+id+","+power+","+hp+",'"+param+"',"+mymaxhp+")");
@@ -2632,7 +2650,7 @@ function drinkhealthpotion(id, mymaxhp) {
 			myhp=mymaxhp;
 		}
 		myhealthpoint(true,myhp);
-		$(".player-"+id+"-hp").html(myhp);
+		$(".player-"+id+"-hp").html(myhp.toLocaleString("en"));
 		$(".button-health-"+id).attr("onclick","drinkhealthpotion("+id+","+myhp+")");
 		healthdelay(id,mindelay);
 	}
@@ -2647,7 +2665,7 @@ function usetheskill(id) {
 			if(enemyhealthpoint(false,0)<=0) {
 				enemyhealthpoint(true,0);
 			}
-			$(".enemy-"+id+"-hp").html(enemyhp);
+			$(".enemy-"+id+"-hp").html(enemyhp.toLocaleString("en"));
 			$(".thunder-"+id).css("opacity","1");
 			$(".alert").shake();
 			setTimeout(function() {
@@ -2689,7 +2707,7 @@ function usepotion(pid,id) {
 				hp=0;
 			}
 			enemyhealthpoint(true,hp);
-			$(".enemy-"+id+"-hp").html(hp);
+			$(".enemy-"+id+"-hp").html(hp.toLocaleString("en"));
 			if(enemyhealthpoint(false,0)<=0) {
 				setTimeout(function(){winbattle(theparam(false,0),id);},0);
 			}
@@ -2719,7 +2737,7 @@ function usepotion(pid,id) {
 		else if(pid==16) {
 			rand = Math.round(Math.random()*(100+Math.floor(items[3].owned/3.5)));
 			myhealthpoint(true,rand);
-			$(".player-"+id+"-hp").html(rand);
+			$(".player-"+id+"-hp").html(rand.toLocaleString("en"));
 		}
 		else if(pid==17) {
 			prompt("What the...","MS4wMzkzfHwxMzc4ODMwNjMyODc2O05hTjsxMzgzMjM5MTM4NTc1fDAwMTEwMHwxOTI5ODUyNzY5LjA2MDA1NTs3MDY0MjEyNzE3NDkuMTAyMzs4Mjk3OzE5OzEzODI1NTk5NDIxLjg4MTQ0Mzs4MDstMTstMTswOzA7MDswOzY3OzQ3OTY5OzA7MDswOzB8MTI4LDEyOSw3Njg0NTM2MjE3LDA7MTA1LDEwNiwyMzc2Njc5MzIwLDA7MTAxLDEwMSw1NDE3MzU5OCwwOzEwMSwxMDEsMjM5MDExOTgxLDE7ODIsODIsNjEzNDEwODI2LDA7NTgsNTgsMTQxNDg4MTkyNiwwOzUwLDUwLDI4MzExMzI1NzIsMDs1MCw1MCw0MDU2NjYyNTI3MywwOzI3LDI3LDY2NDU0OTU1NDYwLDA7MTYsMTYsMjI3NzgyMzIwNDU0LDA7fDQ1MDM1OTk2MjczNzA0OTU7NDUwMzEwMDMzNzQyMjMzNTsyMjUxODM0MTczNDAxNzAzOzM5NDA2NDk2NzM5NTk5MzU7MjI1MTc5OTk0NTgwNTk2MzsxMzc0Mzg5NTM0NzN8NDUwMzA0Nzc5MTA4MzUxOTsyMzkyODE2NzQwMTEyMDkxOzEwMjU%3D%21END%21");
