@@ -929,8 +929,8 @@ computer="                                            _________________\n\
 story="\n\
 \n\
        _\n\
-   .&bull;'   '&bull;.    \"Who is standing there?               O\n\
-  /         \\    Hmmmm... That's weird...\"           /|\\\n\
+   .&bull;'   '&bull;.    \"谁站在那里?                 O\n\
+  /         \\    嗯... 这太怪了...\"                  /|\\\n\
  |           |                                        |\n\
  |           |                                       / \\\n\
   \\         /    <input type='button' value='下一个 >' onclick='guy(1)'>                              \n\
@@ -1418,32 +1418,32 @@ man="\n\
 	if(action=="talk") {
 		if(talk==0) {
 man="\n\
-           Hi, it seems       O\n\
-           that you have     /|\\\n\
-           spent a lot of     |\n\
-           time to get here! / \\";
+           嗨，看起来          O\n\
+           你花费了           /|\\\n\
+           不少时间            |\n\
+           到达这里!          / \\";
 
-			$(".talk-with-dude").val("Yeah, it was a long journey...");
+			$(".talk-with-dude").val("是的，这是一段漫长的旅程...");
 			$(".fight-with-dude").hide();
 			$(".give-secret-potion").hide();
 		}
 		else if(talk==1) {
 man="\n\
-           How could I        O\n\
-           help you?         /|\\\n\
+           我怎么能            O\n\
+           帮助你?            /|\\\n\
                               |\n\
                              / \\";
 
-			$(".talk-with-dude").val("I have no idea!");
+			$(".talk-with-dude").val("我也不知道!");
 			$(".fight-with-dude").hide();
 			$(".give-secret-potion").hide();
 		}
 		else if(talk==2) {
 man="\n\
-           Oh, I know!        O      I'm interested in:\n\
-           Please, tell me   /|\\     <input type=\"button\" value=\"战斗\" onclick=\"theman('battle')\">\n\
-           what you are more  |      <input type=\"button\" value=\"魔法\" onclick=\"theman('magic')\">\n\
-           interested in.    / \\";
+           哦，我知道了!        O      我感兴趣的是:\n\
+           请告诉我           /|\\     <input type=\"button\" value=\"战斗\" onclick=\"theman('battle')\">\n\
+           你对什么            |      <input type=\"button\" value=\"魔法\" onclick=\"theman('magic')\">\n\
+           比较感兴趣.        / \\";
 
 		}
 
@@ -1467,62 +1467,62 @@ man="\n\
 	randomspeech2=randomnumber(1,8);
 if(randomspeech==1) {
 man="\n\
-            Ugh...            O\n\
-            I hate fighting. /|\\\n\
+            呃...             O\n\
+            我讨厌战斗.        /|\\\n\
                               |\n\
                              / \\";
 }
 else if(randomspeech==2) {
 man="\n\
-            Is fighting       O\n\
-            the only hobby   /|\\\n\
-            you have?         |\n\
-                             / \\";
+            战斗是           O\n\
+            你唯一的        /|\\\n\
+            爱好吗?          |\n\
+                           / \\";
 }
 else if(randomspeech==3) {
 man="\n\
-            No, I'm           O\n\
-            not ready!       /|\\\n\
+            不，我             O\n\
+            没准备好!         /|\\\n\
                               |\n\
                              / \\";
 }
 else if(randomspeech==4) {
 man="\n\
-            Maybe you         O\n\
-            would like       /|\\\n\
-            to fight with     |\n\
-            someone else?    / \\";
+            可能你         O\n\
+            会喜欢        /|\\\n\
+            和其他人       |\n\
+            战斗?        / \\";
 }
 else if(randomspeech==5) {
 man="\n\
-            I'm not           O\n\
-            equipped with    /|\\\n\
-            armor and         |\n\
-            weapons!         / \\";
+            我不穿             O\n\
+            盔甲              /|\\\n\
+            和                 |\n\
+            武器!             / \\";
 }
 else if(randomspeech==6) {
 man="\n\
                               O\n\
-            No, no pls       /|\\\n\
+            不，请不要         /|\\\n\
                               |\n\
                              / \\";
 }
 else if(randomspeech2==7) {
 man="\n\
                               O\n\
-            My name          /|\\\n\
-            is Bob!           |\n\
+            我的名字          /|\\\n\
+            是鲍勃 !           |\n\
                              / \\";
 }
 else  {
 man="\n\
                               O\n\
-            Not now...       /|\\\n\
+            不是现在...       /|\\\n\
                               |\n\
                              / \\";
 }
 		$(".theman").html(man);
-		$(".talk-with-dude").val("Talk to him");
+		$(".talk-with-dude").val("和他谈谈");
 		$(".talk-with-dude").show();
 		$(".fight-with-dude").show();
 		$(".give-secret-potion").show();
@@ -1532,28 +1532,28 @@ man="\n\
 	}
 	else if(action=="battle") {
 man="\n\
-  Oh, so you like battle?     O   manages to defeat it will\n\
-  I have an invisible        /|\\  get lots of prizes from\n\
-  training robot in my        |   me. Are you ready?\n\
-  castle! Anyone who         / \\  <input type=\"button\" value=\"是的，我准备好了!\" onclick=\"vsinvisiblebot()\">";
+  哦，所以你喜欢战斗?            O   设法战胜它将\n\
+  我有一个隐形的               /|\\  获得很多奖励从\n\
+  训练机器人在我的              |   我这里. 你准备好了吗?\n\
+  城堡! 谁                   / \\  <input type=\"button\" value=\"是的，我准备好了!\" onclick=\"vsinvisiblebot()\">";
 		$(".theman").html(man);
 	}
 	else if(action=="magic") {
 man="\n\
-         There is a portal    O     portal seems\n\
-         in my castle. I     /|\\    very magical.\n\
-         have never entered   |     <input type=\"button\" value=\"进入传送门!\" onclick=\"entermagicportal()\">\n\
-         it before, but the  / \\";
+         这里有一个传送门      O     传送门看起来\n\
+         在我的城堡里. 我     /|\\    非常魔魔法.\n\
+         在此之前从没进去过     |     <input type=\"button\" value=\"进入传送门!\" onclick=\"entermagicportal()\">\n\
+         但是               / \\";
 		$(".theman").html(man);
 	}
 	else if(action=="givesecretpotion") {
 		items[20].owned--;
 		items[23].owned++;
 man="\n\
-         Oh, thank you!       O    this thing for years\n\
-         As a reward, you    /|\\   but I don't know what\n\
-         can have this music  |    it is used for. Maybe you\n\
-         disc. I have kept   / \\   can use it better than me!";
+         哦，谢谢你!            O    这个东西很多年\n\
+         作为奖励，你          /|\\   但是我不知道它\n\
+         可以拥有这个音乐        |    可以用来干吗. 或许你\n\
+         光盘. 我保留了        / \\   可以比我更好的使用它!";
 		$(".theman").html(man);
 		if(items[20].owned<=0) {
 			$(".give-secret-potion").hide();
@@ -1798,10 +1798,10 @@ function guy(step) {
 	if(step==1) {
 story="\n\
        _\n\
-   .&bull;'   '&bull;.    \"It seems that I have seen            O\n\
-  /         \\    that guy before, hmmmm...\"          /|\\\n\
- |           |                                        |\n\
- |           |                                       / \\\n\
+   .&bull;'   '&bull;.    \"我之前好像                    O\n\
+  /         \\    看到了他, 哼...\"                      /|\\\n\
+ |           |                                          |\n\
+ |           |                                         / \\\n\
   \\         /    <input type='button' value='下一个 >' onclick='guy(2)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
@@ -1814,9 +1814,9 @@ story="\n\
 	else if(step==2) {
 story="\n\
        _\n\
-   .&bull;'   '&bull;.    \"Oh, yes, I know him!                 O\n\
-  /         \\    He is the one who brought me        /|\\\n\
- |           |   to this weird world >:C\"             |\n\
+   .&bull;'   '&bull;.    \"哦, 是的, 我知道他!          O\n\
+  /         \\    是他把我带到了                        /|\\\n\
+ |           |   这个世界 >:C\"                         |\n\
  |           |                                       / \\\n\
   \\         /    <input type='button' value='下一个 >' onclick='guy(3)'>                              \n\
    '&bull;.   .&bull;'\n\
@@ -1830,10 +1830,10 @@ story="\n\
 	else if(step==3) {
 story="\n\
        _\n\
-   .&bull;'   '&bull;.    \"I must kill him!\"                    O\n\
+   .&bull;'   '&bull;.    \"我必须杀死他!\"              O\n\
   /         \\                                        /|\\\n\
- |           |                                        |\n\
- |           |                                       / \\\n\
+ |           |                                         |\n\
+ |           |                                        / \\\n\
   \\         /    <input type='button' value='下一个 >' onclick='guy(4)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
@@ -1846,10 +1846,10 @@ story="\n\
 	else if(step==4) {
 story="\n\
        _\n\
-   .&bull;'   '&bull;.                    \"No, you can't kill   O\n\
-  /         \\                   me, you idiot >:(\"   /|\\\n\
- |           |                                        |\n\
- |           |                                       / \\\n\
+   .&bull;'   '&bull;.                    \"不，你不能杀死   O\n\
+  /         \\                   我, 你这个白痴 >:(\"       /|\\\n\
+ |           |                                             |\n\
+ |           |                                            / \\\n\
   \\         /    <input type='button' value='战斗!' onclick='guy(5)'>                              \n\
    '&bull;.   .&bull;'\n\
      /   \\\n\
@@ -2942,9 +2942,9 @@ scroll='\n\
    _______________________\n\
  =(__    ___      __     _)=\n\
    |                     |\n\
-   |  The password is:   |\n\
-   | Ring-ding-ding-ding |\n\
-   |  -dingeringeding!   |\n\
+   |        密码是:       |\n\
+   |      叮-叮-叮-叮     |\n\
+   |       -叮叮叮!       |\n\
    |                     |\n\
  =(_______________________)=\n\
 ';
