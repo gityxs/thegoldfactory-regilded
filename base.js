@@ -1858,7 +1858,7 @@ story="\n\
   / / | | \\ \\\n\
 \n\
 \n\
-PS: He heals 5 HP each time he attacks you, and he also has armor!";
+PS: 他每次攻击你都会治疗5点生命值，而且他还有护甲！";
 		$(".boss-story").html(story);
 	}
 	else if(step==5) {
@@ -1886,29 +1886,29 @@ message='\n\
    _______________________\n\
  =(__    ___      __     _)=\n\
    |                     |\n\
-   | A message from the  |\n\
-   | original dev to you:|\n\
+   |      一条来自原作者   |\n\
+   |       给你的消息:     |\n\
    |                     |\n\
-   | Hi! and thanks for  |\n\
-   | playing my game! :D |\n\
+   |     嗨! 非常感谢你    |\n\
+   |     玩我的游戏! :D    |\n\
    |                     |\n\
-   | I would like to say |\n\
-   | Congratulations!!!! |\n\
-   | You won the game!   |\n\
+   |      在这里我想说     |\n\
+   |      恭喜你!!!!      |\n\
+   |   你通关了这个游戏!    |\n\
    |                     |\n\
-   | But maybe this game |\n\
-   | is not finished for |\n\
-   | you, have you dug   |\n\
-   | through the end?    |\n\
+   |    但是可能这个游戏    |\n\
+   |    对你来说还没结束    |\n\
+   |       , 你翻遍       |\n\
+   |       结尾了吗?      |\n\
    |                     |\n\
-   | If not, then do it! |\n\
+   |  如果没有，请继续!    |\n\
    |                     |\n\
-   | If yes, then I      |\n\
-   | think you will be   |\n\
-   | bored, that\'s why   |\n\
-   | I recommend you to  |\n\
-   | <a href="http://bit.ly/1gMQO9u">Click here</a> to kill  |\n\
-   | your boredom :D     |\n\
+   |     你过你完成了      |\n\
+   |    我想你会感到无聊   |\n\
+   |      , 这就是为什么   |\n\
+   |        我建议你去     |\n\
+   |        <a href="http://bit.ly/1gMQO9u">Click here</a> 以杀死      |\n\
+   |      你的无聊 :D      |\n\
    |                     |\n\
    | -gamehelp16         |\n\
  =(_______________________)=\n\
@@ -2943,8 +2943,8 @@ scroll='\n\
  =(__    ___      __     _)=\n\
    |                     |\n\
    |        密码是:       |\n\
-   |      叮-叮-叮-叮     |\n\
-   |       -叮叮叮!       |\n\
+   | Ring-ding-ding-ding |\n\
+   |  -dingeringeding!   |\n\
    |                     |\n\
  =(_______________________)=\n\
 ';
