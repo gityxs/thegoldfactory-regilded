@@ -1223,16 +1223,16 @@ scroll='\n\
    _______________________\n\
  =(__    ___      __     _)=\n\
    |                     |\n\
-   | How to make a       |\n\
-   | nether portal:      |\n\
+   |     如何制作一个      |\n\
+   |      冥界之门:       |\n\
    |                     |\n\
-   | 1. Get 14 obsidian  |\n\
-   |    cubes            |\n\
-   | 2. Arrange them so  |\n\
-   |    they form a      |\n\
-   |    frame            |\n\
-   | 3. Walk through the |\n\
-   |    frame            |\n\
+   | 1. 获得14个黑曜石     |\n\
+   |    立方体            |\n\
+   | 2. 把它们            |\n\
+   |    排列成            |\n\
+   |    一个框架          |\n\
+   | 3. 走进穿过          |\n\
+   |    框架             |\n\
    |                     |\n\
    |__    ___   __    ___|\n\
  =(_______________________)=\n\
