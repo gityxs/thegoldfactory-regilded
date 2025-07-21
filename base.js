@@ -238,7 +238,7 @@ function updateitems() {
 	else {
 		$(".digcd").html("Done!");
 	}
-	$("#hurry-dig-button").val("Use another shovel ["+items[1].owned.toLocaleString("en")+"]");
+	$("#hurry-dig-button").val("使用另一个铲子 ["+items[1].owned.toLocaleString("en")+"]");
 
 	if(items[2].owned>=1) {
 		$(".wooden-sword-shop").hide();
@@ -3344,7 +3344,7 @@ function battlevsrats() {
 }
 function checkcipher() {
 
-	let wrongmessage = "正确!";
+	let wrongmessage = "错误!";
 
 	if(cipherstep==0) {
 		if($("#cipherthecodeanswer").val().toLowerCase()=="master branch") {
