@@ -227,7 +227,7 @@ function updateitems() {
 
 	$(".current-cookie").html((items[19].owned).toLocaleString("en"));
 	$(".cps").html(cursor/10);
-	$(".cursor-button").val("Cursor ["+cursor+"]");
+	$(".cursor-button").val("光标 ["+cursor+"]");
 	$(".cursor-price").html(15*Math.pow(1.15,cursor));
 
 	$(".airplanecd").html(airplanecountdown.toLocaleString("en"));
